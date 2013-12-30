@@ -1,0 +1,19 @@
+web1:
+  name: hellomavis
+  php_version: 5.3.8
+  php_display_errors: '1'
+  php_extensions:
+    - mysqli
+    - mysql
+    - pdo_mysql
+    - curl
+    - mcrypt
+    - eaccelerator
+    - memcached
+    - mbstring
+    - zip
+db1:
+  name: wp_hellomavis
+  type: mysql
+shared_writeable_dirs:
+  - media
