@@ -12,8 +12,8 @@ web1:
     - memcached
     - mbstring
     - zip
+  shared_writable_dirs:
+    - media
 db1:
   name: wp_hellomavis
   type: mysql
-shared_writable_dirs:
-  - media
