@@ -26,3 +26,6 @@ add_action('after_setup_theme', 'roots_setup');
 
 // Backwards compatibility for older than PHP 5.3.0
 if (!defined('__DIR__')) { define('__DIR__', dirname(__FILE__)); }
+
+// Disable admin bar
+add_filter( 'show_admin_bar' , '__return_false' ) ;
