@@ -26,6 +26,8 @@ class Mavis_Job_Manager {
 		define( 'MAVIS_JOB_MANAGER_VERSION' , '1.0.0' ) ;
 		define( 'MAVIS_JOB_MANAGER_PLUGIN_URL', untrailingslashit( plugins_url( basename( plugin_dir_path( __FILE__ ) ) , basename( __FILE__ ) ) ) ) ;
 
+		include( 'includes/class-mavis-job-manager-shortcodes.php' ) ;
+
 		if ( is_admin( ) )
 			include( 'includes/admin/class-mavis-job-manager-admin.php' ) ;
 

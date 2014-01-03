@@ -1,6 +1,6 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit ; // Exit if accessed directly
 
 class Mavis_Job_Manager_Writepanels
 {
