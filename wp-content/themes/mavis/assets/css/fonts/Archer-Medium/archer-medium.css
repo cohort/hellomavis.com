@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'ArcherMedium';
+    src: url('archer-medium.eot');
+    src: url('archer-medium.eot') format('embedded-opentype'),
+         url('archer-medium.woff') format('woff'),
+         url('archer-medium.ttf') format('truetype'),
+         url('archer-medium.svg#ArcherMedium') format('svg');
+}
