@@ -29,8 +29,18 @@
          url( 'fonts/archer-medium.svg#ArcherMedium' ) format( 'svg' );
 }
 
+@font-face {
+    font-family: 'Archer Book';
+    src: url( 'fonts/archer-book.eot' );
+    src: url( 'fonts/archer-book.eot' ) format( 'embedded-opentype' ),
+         url( 'fonts/archer-book.woff' ) format( 'woff' ),
+         url( 'fonts/archer-book.ttf' ) format( 'truetype' ),
+         url( 'fonts/archer-book.svg#ArcherBook' ) format( 'svg' );
+}
+
 
 body {
+	background-color: $color-cream;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 	font-weight: 300;
@@ -44,6 +54,15 @@ h1 {
 	letter-spacing: 0;
 	line-height: 125%;
 	margin: 0;
+}
+
+a {
+	color: #000;
+}
+
+a:hover {
+	color: #333;
+	text-decoration: none;
 }
 
 .navbar {
@@ -274,20 +293,95 @@ section.about {
 			background-color: $color-cream;
 			color: #000;
 			margin: 30px 0;
+			padding-left: 30px;
 
 			.col-md-4, .col-md-8 {
-				padding: 30px;
 				margin: 0;
+				padding: 30px 30px 30px 0;
+			}
+
+			.portrait {
+				img {
+					width: 100%;
+				}
 			}
 
 			h2.name {
 				font-family: 'Archer Medium', serif;
 				font-size: 1.6em;
-				margin: 30px;
+				margin: 0 0 30px 0;
 			}
 
 			.bio {
-				margin: 0 7% 0 30px;
+				margin: 0 7% 0 0;
+
+				a.more-link {
+					border-top: 1px solid $color-grey;
+					display: block;
+					font-family: 'Archer Semibold', serif;
+					font-size: 1.2em;
+					margin: 70px 0 0 0;
+					padding: 20px 0 0 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+section.contact {
+	background-color: $color-cream;
+
+	.inner {
+		padding: 7%;
+		width: 100%;
+
+		.title {
+			width: 100%;
+			text-align: center;
+
+			h1 {
+				border-bottom: 3px solid $color-orange;
+				display: inline-block;
+			}
+		}
+
+		.content {
+			font-family: 'Archer Book', serif;
+			font-size: 1.6em;
+			margin: 30px auto;
+			text-align: center;
+			width: 720px;
+		}
+
+		.details {
+			margin-top: 60px;
+		}
+	}
+}
+
+footer {
+	background: $color-cream $footer-texture;
+	font-weight: 400;
+	height: 90px;
+	line-height: 90px;
+	text-align: center;
+	width: 100%;
+}
+
+/* Tablet (Portrait) */
+@media screen and (max-width: 768px) {
+
+	section.working-together {
+		.inner {
+			.content {
+				.one_half {
+					width: 100%;
+				}
+
+				.last_column {
+					margin-top: 25px;
+				}
 			}
 		}
 	}

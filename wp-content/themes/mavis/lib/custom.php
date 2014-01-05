@@ -29,3 +29,12 @@ wp_register_script( 'mavis_scripts' , get_stylesheet_directory_uri( ) . '/assets
 
 wp_enqueue_script( 'flexslider' ) ;
 wp_enqueue_script( 'mavis_scripts' ) ;
+
+/**
+* Excerpt length
+*/
+function excerpt_length ( $length )
+{
+	return 100 ;
+}
+add_filter( 'excerpt_length' , 'excerpt_length' , 999 ) ;
