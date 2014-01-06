@@ -7,13 +7,13 @@ add_theme_support( 'custom-header' ) ;
 /**
  * Remove admin menus
  */
-function remove_menus ( )
+function mavis_remove_menus ( )
 {
 	remove_menu_page( 'edit.php' ) ;
 	remove_menu_page( 'edit-comments.php' ) ;
 }
 
-add_action( 'admin_menu' , 'remove_menus' ) ;
+add_action( 'admin_menu' , 'mavis_remove_menus' ) ;
 
 /**
  * Add theme CSS
@@ -31,10 +31,11 @@ wp_enqueue_script( 'flexslider' ) ;
 wp_enqueue_script( 'mavis_scripts' ) ;
 
 /**
-* Excerpt length
-*/
-function excerpt_length ( $length )
+ * Add and remove body_class() classes
+ */
+function mavis_body_class ( $classes )
 {
-	return 100 ;
+	// $classes[ ] = 'hidden' ;
+	return $classes;
 }
-add_filter( 'excerpt_length' , 'excerpt_length' , 999 ) ;
+add_filter( 'body_class' , 'mavis_body_class' ) ;

@@ -28,17 +28,15 @@
 		<ul class="slides">
 
 			<?php foreach ( $children as $child ) : ?>
-			<?php 
-				$content = $child->post_content ;
-				$background = wp_get_attachment_image_src( get_post_thumbnail_id( $child->ID ) , 'full' ) ;
-			?>
 			<li>
 				<div class="slide">
-					<div class="slide-background">
-						<img src="<?php echo $background[ 0 ] ; ?>" />
-					</div>
+					<?php
+						$background_colour = get_field( 'background_colour' , $child->ID ) ;
+						$background_image = get_field( 'background_image' , $child->ID ) ;
+					?>
+					<div class="slide-background" style="background-color: <?php echo $background_colour ; ?> !important;background-image: url('<?php echo $background_image[ 'url' ] ; ?>') !important"></div>
 					<div class="slide-content">
-						<div><?php echo do_shortcode( $content ) ; ?></div>
+						<div class="<?php echo $child->post_name ; ?>"><?php echo do_shortcode( $child->post_content ) ; ?></div>
 						<div class="link">
 							<a href="<?php echo the_field( 'page-link-url' , $child->ID ) ; ?>" title="About"><?php echo the_field( 'page-link-title' , $child->ID ) ; ?></a>
 						</div>
@@ -53,3 +51,4 @@
 	<?php } ?>
 
 </section>
+

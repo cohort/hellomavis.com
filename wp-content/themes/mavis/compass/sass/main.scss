@@ -72,7 +72,7 @@ a:hover {
 
 .navbar {
 	background-color: #f8f4ec;
-	display: none;
+	/*display: none;*/
 	position: fixed;
 	width: 100%;
 }
@@ -112,7 +112,7 @@ section.overview {
 		}
 
 		.flex-control-nav {
-			bottom: 150px;
+			bottom: 50px;
 
 			li {
 				a {
@@ -128,7 +128,6 @@ section.overview {
 		}
 
 		.slide {
-			height: 100%;
 			position: relative;
 			width: 100%;
 
@@ -136,7 +135,7 @@ section.overview {
 				color: #fff;
 				display: block;
 				position: absolute;
-				top: 500px;
+				top: 440px;
 				width: 100%;
 
 				h1 {
@@ -158,7 +157,7 @@ section.overview {
 				> div {
 					margin: 0 auto;
 					text-align: center;
-					width: 720px;
+					width: 750px;
 				}
 
 				blockquote {
@@ -176,7 +175,7 @@ section.overview {
 					position: absolute;
 					text-align: center;
 					text-transform: uppercase;
-					top: 350px;
+					top: 410px;
 					width: 100%;
 
 					a {
@@ -186,29 +185,37 @@ section.overview {
 					}
 				}
 
-				.latest-job {
-					background-image: $background-texture;
-					padding: 4px;
-					width: 100%;
+				.introduction {
+					margin-top: 60px;
+				}
 
-					.inner {
-						background-color: $color-blue;
-						display: block;
-						height: 100%;
-						padding: 50px;
+				.latest-job {
+					margin-top: 0;
+
+					.latest-job-box {
+						background-image: $background-texture;
+						padding: 4px;
 						width: 100%;
+
+						.inner {
+							background-color: $color-blue;
+							display: block;
+							padding: 50px;
+							width: 100%;
+						}
 					}
+				}
+
+				.testimonial {
+					margin-top: 60px;
 				}
 			}
 
 			.slide-background {
-				img {
-					-webkit-user-select: none;
-					-khtml-user-select: none;
-					-moz-user-select: none;
-					-o-user-select: none;
-					user-select: none;
-				}
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
 			}
 		}
 	}
@@ -429,7 +436,7 @@ section.contact {
 
 				li {
 					display: inline-block;
-					padding: 0 15px;
+					padding: 0 15px 15px;
 				}
 			}
 		}
@@ -447,6 +454,67 @@ footer {
 
 /* Tablet (Portrait) */
 @media screen and (max-width: 768px) {
+
+	body {
+		font-size: 16px;
+	}
+
+	h1 {
+		font-size: 2em;
+		line-height: 135%;
+	}
+
+	section.overview {
+		.logo {
+			height: 240px;
+
+			.logo-image {
+				margin: 90px auto;
+				width: 190px;
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+
+		.flexslider {
+			.flex-control-nav {
+				bottom: 40px;
+			}
+
+			.slide {
+				.slide-content {
+					top: 300px;
+
+					h2 {
+						font-size: 1.6em;
+					}
+
+					> div {
+						width: 540px;
+					}
+
+					blockquote {
+						font-size: 2em;
+					}
+
+					.link {
+						top: 280px;
+						width: 100%;
+					}
+
+					.latest-job {
+						.latest-job-box {
+							.inner {
+								padding: 35px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
 	section.working-together {
 		.inner {

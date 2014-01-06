@@ -39,12 +39,12 @@
 	?>
 		<div class="person row">
 			<?php $portrait = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) , 'full' ) ; ?>
-			<div class="col-md-4 col-sm-6 col-xs-12">
+			<div class="col-md-4 col-sm-5 col-xs-12">
 				<div class="portrait">
 					<img src="<?php echo $portrait[ 0 ] ; ?>" alt="<?php the_title( ) ; ?>" />
 				</div>
 			</div>
-			<div class="col-md-8 col-sm-6 col-xs-12">
+			<div class="col-md-8 col-sm-7 col-xs-12">
 				<h2 class="name"><?php the_title( ) ; ?></h2>
 				<div class="bio">
 					<div class="teaser">
@@ -62,4 +62,6 @@
 		</div>
 	<?php endforeach ; ?>
 
+	</div>
 </section>
+

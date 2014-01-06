@@ -50,7 +50,7 @@ class Mavis_Job_Manager_Shortcodes
 
 		<?php endif ;
 
-		return '<div class="latest-job">' . ob_get_clean( ) . '</div>' ;
+		return '<div class="latest-job-box">' . ob_get_clean( ) . '</div>' ;
 	}	
 }
 
