@@ -350,12 +350,61 @@ section.contact {
 			font-family: 'Archer Book', serif;
 			font-size: 1.6em;
 			margin: 30px auto;
+			padding: 0 17%;
 			text-align: center;
-			width: 720px;
 		}
 
 		.details {
 			margin-top: 60px;
+
+			.detail {
+				height: 250px;
+
+				> div {
+					margin: 0 auto;
+				}
+
+				.icon {
+					width: 64px;
+
+					img {
+						width: inherit;
+					}
+				}
+
+				.copy {
+					margin-top: 25px;
+					text-align: center;
+				}
+			}
+
+			.address {
+				.copy {
+				}
+			}
+		}
+
+		.social {
+			border-top: 1px solid $color-grey;
+			padding-top: 30px;
+
+			.header-copy {
+				font-family: 'Archer Semibold', serif;
+				font-size: 1.2em;
+				text-align: center;
+			}
+
+			ul {
+				list-style-type: none;
+				margin: 15px 0 0;
+				padding: 0;
+				text-align: center;
+
+				li {
+					display: inline-block;
+					padding: 0 15px;
+				}
+			}
 		}
 	}
 }
@@ -382,6 +431,22 @@ footer {
 				.last_column {
 					margin-top: 25px;
 				}
+			}
+		}
+	}
+
+	section.about {
+		.quote {
+			.content {
+				padding: 7%;
+			}
+		}
+	}
+
+	section.contact {
+		.inner {
+			.content {
+				padding: 0 7%;
 			}
 		}
 	}
