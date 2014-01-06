@@ -1,5 +1,5 @@
 <!-- ABOUT -->
-<section class="about">
+<section id="about" class="about">
 
 	<?php
 
@@ -46,7 +46,18 @@
 			</div>
 			<div class="col-md-8 col-sm-6 col-xs-12">
 				<h2 class="name"><?php the_title( ) ; ?></h2>
-				<div class="bio"><?php $more = 0 ; the_content( '+ Read more' ) ; ?></div>
+				<div class="bio">
+					<div class="teaser">
+						<?php $more = 0 ; the_content( '' , FALSE ) ; ?>
+					</div>
+					<div class="more">
+						<?php $more = 1 ; the_content( '' , TRUE ) ; ?>
+					</div>
+					<div class="links">
+						<a href="<?php echo get_permalink( $post->ID ) ; ?>" class="more-link">+ Read more</a>
+						<a href="<?php echo site_url( 'about' ) ; ?>" class="close-link hidden">- Close</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	<?php endforeach ; ?>

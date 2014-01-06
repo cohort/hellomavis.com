@@ -1,5 +1,5 @@
 <!-- JOBS -->
-<section class="jobs">
+<section id="jobs" class="jobs">
 	
 	<?php
 

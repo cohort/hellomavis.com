@@ -1,5 +1,5 @@
 <!-- OVERVIEW -->
-<section class="overview">
+<section id="overview" class="overview">
 	<div class="logo">
 		<div class="logo-image">
 			<img src="<?php echo get_header_image( ) ; ?>" alt="Mavis Logo" />

@@ -1,5 +1,5 @@
 <!-- CONTACT -->
-<section class="contact">
+<section id="contact" class="contact">
 
 	<?php
 

@@ -1,5 +1,5 @@
 <!-- WORKING TOGETHER -->
-<section class="working-together">
+<section id="working-together" class="working-together">
 
 	<?php
 

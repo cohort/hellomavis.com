@@ -56,13 +56,18 @@ h1 {
 	margin: 0;
 }
 
-a {
+a, a:focus {
 	color: #000;
+	outline: 0;
+
+	transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;	
 }
 
 a:hover {
-	color: #333;
-	text-decoration: none;
+	color: $color-grey;
 }
 
 .navbar {
@@ -314,19 +319,41 @@ section.about {
 
 			.bio {
 				margin: 0 7% 0 0;
+				position: relative;
 
-				a.more-link {
-					border-top: 1px solid $color-grey;
-					display: block;
-					font-family: 'Archer Semibold', serif;
-					font-size: 1.2em;
-					margin: 70px 0 0 0;
-					padding: 20px 0 0 0;
+				a {
+					text-decoration: underline;
+				}
+
+				.more {
+					display: none;
+				}
+
+				.links {
+					padding: 70px 0;
+					position: relative;
 					width: 100%;
+
+					a.more-link, a.close-link {
+						border-top: 1px solid $color-grey;
+						display: block;
+						font-family: 'Archer Semibold', serif;
+						font-size: 1.2em;
+						text-decoration: none;
+						padding-top: 20px;
+						position: absolute;
+						width: inherit;						
+					}
 				}
 			}
 		}
 	}
+}
+
+.hidden {
+	display: none;
+	height: 0;
+	overflow: hidden;
 }
 
 section.contact {
