@@ -29,7 +29,8 @@ module.exports = function ( grunt )
 				} ,
 				dist : {
 					files : [
-						{ src : 'assets/js/scripts.js' , dest : 'assets/js/scripts.min.js' }
+						{ src : 'assets/js/scripts.js' , dest : 'assets/js/scripts.min.js' } ,
+						{ src : 'assets/js/plugins/flexslider/jquery.flexslider.js' , dest : 'assets/js/plugins/flexslider/jquery.flexslider-min.js' }
 					]
 				}
 			} ,
@@ -43,7 +44,8 @@ module.exports = function ( grunt )
 				} ,
 				js : {
 					files : [ 
-						'assets/js/scripts.js'
+						'assets/js/scripts.js' ,
+						'assets/js/plugins/flexslider/jquery.flexslider.js'
 					] ,
 					tasks : [ 'uglify:dist' ] ,
 					options : {
