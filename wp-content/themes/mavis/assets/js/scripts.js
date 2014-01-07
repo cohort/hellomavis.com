@@ -16,14 +16,8 @@ $( document ).ready(
 		$( window ).scroll(
 			function ( )
 			{
-				if ( $( 'html' ).scrollTop( ) < 10 )
-				{
-					$( 'header' ).addClass( 'hidden' ) ;
-				}
-				else
-				{
-					$( 'header' ).removeClass( 'hidden' ) ;
-				}
+				if ( $( document ).scrollTop( ) < 10 ) $( 'header' ).addClass( 'hidden' ) ;
+				else $( 'header' ).removeClass( 'hidden' ) ;
 
 				if ( isScrolling ) return ;
 
@@ -39,9 +33,10 @@ $( document ).ready(
 			{
 				var href = $( this ).attr( 'href' ) ,
 					http = new RegExp( 'http://' ).test( href ) ,
-					local = new RegExp( location.host ).test( href ) ;
+					local = new RegExp( location.host ).test( href ) ,
+					email = new RegExp( 'mailto:' ).test( href ) ;
 
-				if ( ! http || ( http && local ) )
+				if ( ! email && ( ! http || ( http && local ) ) )
 				{
 					e.preventDefault( ) ;
 					canScroll = true ;
@@ -178,7 +173,7 @@ $( document ).ready(
 
 				if ( scrollTo != undefined )
 				{
-					$( 'html' ).animate(
+					$( 'html,body' ).animate(
 						{ scrollTop : scrollTo } ,
 						Math.max( Math.abs( scrollTo - $( window ).scrollTop( ) ) / 2 , 1000 ) ,
 						'easeInOutExpo' ,
