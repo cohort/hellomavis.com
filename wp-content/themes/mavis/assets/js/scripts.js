@@ -16,8 +16,14 @@ $( document ).ready(
 		$( window ).scroll(
 			function ( )
 			{
-				if ( $( document ).scrollTop( ) < 10 ) $( 'header' ).addClass( 'hidden' ) ;
-				else $( 'header' ).removeClass( 'hidden' ) ;
+				if ( $( document ).scrollTop( ) < 280 )
+				{
+					$( 'header > .over' ).addClass( 'fade-hidden' ) ;
+				}
+				else
+				{
+					$( 'header > .over' ).removeClass( 'fade-hidden' ) ;
+				}
 
 				if ( isScrolling ) return ;
 
@@ -143,7 +149,7 @@ $( document ).ready(
 		{
 			if ( isScrolling ) return ;
 
-			$( 'li' , $( '#menu-primary-navigation' ) ).each(
+			$( 'ul#menu-primary-navigation > li' ).each(
 				function ( e )
 				{
 					if ( page == cleanUrl( $( 'a' , $( this ) ).attr( 'href' ) ) )
@@ -200,6 +206,22 @@ $( document ).ready(
 		function init ( )
 		{
 			update( ) ;
+
+			// $( 'ul#menu-primary-navigation' ).height( $( window ).height( ) ) ;
+			// data-toggle="collapse" data-target=".navbar-collapse"
+
+			$( 'ul#menu-primary-navigation > li' ).each(
+				function ( )
+				{
+					$( 'a' , $( this ) ).click(
+						function ( e )
+						{
+							$( this ).attr( 'data-toggle' ,  'collapse' ) ;
+							$( this ).attr( 'data-target' ,  '.navbar-collapse' ) ;
+						}
+					) ;
+				}
+			) ;
 
 			if ( hash && hash != '' && hash != '#/' )
 			{
