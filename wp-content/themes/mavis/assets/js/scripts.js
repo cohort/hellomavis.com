@@ -16,6 +16,15 @@ $( document ).ready(
 		$( window ).scroll(
 			function ( )
 			{
+				if ( $( 'html' ).scrollTop( ) < 10 )
+				{
+					$( 'header' ).addClass( 'hidden' ) ;
+				}
+				else
+				{
+					$( 'header' ).removeClass( 'hidden' ) ;
+				}
+
 				if ( isScrolling ) return ;
 
 				var page = $( "section:in-viewport:first" ).attr( "id" ) ;
