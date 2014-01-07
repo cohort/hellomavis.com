@@ -2,6 +2,7 @@ $( document ).ready(
 	function ( )
 	{
 		var state = window.location.pathname.substring( 1 ).replace( /\//g , '' ) ,
+			hash = window.location.hash ,
 			isScrolling = false ,
 			canScroll = false ,
 			timeout = null ;
@@ -9,19 +10,34 @@ $( document ).ready(
 		$( '.flexslider' ).flexslider( {
 			animation : 'slide' ,
 			directionNav : false ,
-			start : update
+			start : init
 		} ) ;
+
+		$( window ).scroll(
+			function ( )
+			{
+				if ( isScrolling ) return ;
+
+				var page = $( "section:in-viewport:first" ).attr( "id" ) ;
+				pushState( page ) ;
+			}
+		) ;
+		
+		$( window ).resize( update ) ;
 
 		$( 'a' ).click(
 			function ( e )
 			{
-				// if ( new RegExp( location.host ).test( $( this ).attr( 'href' ) ) )
-				// {
-				// }
+				var href = $( this ).attr( 'href' ) ,
+					http = new RegExp( 'http://' ).test( href ) ,
+					local = new RegExp( location.host ).test( href ) ;
 
-				e.preventDefault( ) ;
-				canScroll = true ;
-				pushState( $( this ).attr( 'href' ) ) ;
+				if ( ! http || ( http && local ) )
+				{
+					e.preventDefault( ) ;
+					canScroll = true ;
+					pushState( cleanUrl( href ) ) ;
+				}
 			}
 		) ;
 
@@ -52,6 +68,15 @@ $( document ).ready(
 				) ;
 			}
 		) ;
+
+		function cleanUrl ( url )
+		{
+			url = url.replace( 'http://' + window.location.host , '' ) ;
+			url = url.replace( '#' , '' ) ;
+			url = url.replace( /^\/|\/$/g, '' ) ;
+
+			return url ;
+		}
 
 		function update ( e )
 		{
@@ -98,11 +123,9 @@ $( document ).ready(
 
 		function pushState ( page )
 		{
-			page = page.replace( /\//g , '' ) ;
-
 			if ( page != state && window.history.pushState )
 			{
-				window.history.pushState( null , null , page ) ;
+				window.history.pushState( null , null , 'http://' + location.host + '/' + page ) ;
 			}
 		}
 
@@ -116,7 +139,19 @@ $( document ).ready(
 		{
 			if ( isScrolling ) return ;
 
-			// TODO
+			$( 'li' , $( '#menu-primary-navigation' ) ).each(
+				function ( e )
+				{
+					if ( page == cleanUrl( $( 'a' , $( this ) ).attr( 'href' ) ) )
+					{
+						$( this ).addClass( 'active' ) ;
+					}
+					else
+					{
+						$( this ).removeClass( 'active' ) ;
+					}
+				}
+			) ;
 		}
 
 		function goToByScroll ( page )
@@ -126,19 +161,29 @@ $( document ).ready(
 			canScroll = false ;
 			isScrolling = true ;
 
-			var scrollTo = $( 'section[id="' + page + '"]' ).offset( ).top ;
+			var section = $( 'section[id="' + page + '"]' ) ;
 
-			if ( scrollTo != undefined )
+			if ( section.offset( ) )
 			{
-				$( 'html' ).animate(
-					{ scrollTop : scrollTo } ,
-					Math.max( Math.abs( scrollTo - $( window ).scrollTop( ) ) / 2 , 1000 ) ,
-					onScrollToComplete
-				) ;
+				var scrollTo = section.offset( ).top ;
+
+				if ( scrollTo != undefined )
+				{
+					$( 'html' ).animate(
+						{ scrollTop : scrollTo } ,
+						Math.max( Math.abs( scrollTo - $( window ).scrollTop( ) ) / 2 , 1000 ) ,
+						'easeInOutExpo' ,
+						onScrollToComplete
+					) ;
+				}
+				else
+				{
+					isScrolling = false ;
+				}
 			}
 			else
 			{
-				isScrolling = false ;
+				resetActive( ) ;
 			}
 		}
 
@@ -146,33 +191,19 @@ $( document ).ready(
 		{
 			isScrolling = false ;
 			setActive( state ) ;
-		}		
+		}
 
-		$( window ).resize( update ) ;
+		function init ( )
+		{
+			update( ) ;
 
-		$( window ).scroll(
-			function ( )
+			if ( hash && hash != '' && hash != '#/' )
 			{
-				if ( isScrolling ) return ;
-
-				// TODO
-				// var page = $( ".slide:in-viewport:first" ).attr( "data-slide" ) ;
-				// pushState( page ) ;
+				canScroll = true ;
+				pushState( cleanUrl( hash ) ) ;
 			}
-		) ;
 
-		if ( state && state != '' )
-		{
-			setActive( state ) ;
-			$( window ).scrollTop( $( 'section[id="' + state + '"]' ).offset( ).top ) ;
+			poll( ) ;
 		}
-		else
-		{
-			resetActive( ) ;
-			$( window ).scrollTop( 0 ) ;
-		}
-
-		update( ) ;
-		poll( ) ;
 	}
 ) ;

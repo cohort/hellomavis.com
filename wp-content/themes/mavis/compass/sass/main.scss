@@ -546,3 +546,19 @@ footer {
 		}
 	}
 }
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+
+	section.contact {
+		.inner {
+			.details {
+				.detail {
+					height: auto;
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+
+}
