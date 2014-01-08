@@ -389,8 +389,6 @@ section.jobs {
 			margin-top: 60px;
 
 			.job_listings {
-
-
 				.job_filters {
 					background: none;
 
@@ -445,6 +443,66 @@ section.jobs {
 									top: 0;
 									width: 34px;
 								}
+						}
+					}
+				}
+
+				a.load_more_jobs {
+					background: none;
+					font-family: 'Archer Semibold', serif;
+					font-size: 1.2em;
+
+					&:hover {
+						background: none;
+						color: #000;
+					}
+
+					strong {
+						font-weight: normal;
+					}
+				}
+
+				ul.job_listings {
+					border-bottom: 1px solid $color-mid-grey;
+					font-size: .9em;
+					list-style-type: none;
+					margin-bottom: 30px;
+					padding-bottom: 30px;
+
+					li.job-listing {
+						border-top: 1px solid $color-mid-grey;
+						margin-top: 30px;
+						padding-top: 15px;
+
+						h3 {
+							font-family: 'Archer Semibold', serif;
+							font-size: 1.6em;
+						}
+
+						.details, .link {
+							margin-top: 10px;
+						}
+
+						.link {
+							a {
+								background: $color-light-blue;
+								color: #fff;
+								display: block;
+								font-family: 'Archer Medium', serif;
+								padding: 8px 0;
+								text-align: center;
+								text-transform: uppercase;
+								width: 100%;
+
+								-webkit-border-radius: 5px;
+								-moz-border-radius: 5px;
+								border-radius: 5px;
+							}
+
+							a:hover, a:focus {
+								background: $color-blue;
+								text-decoration: none;
+							}
 						}
 					}
 				}

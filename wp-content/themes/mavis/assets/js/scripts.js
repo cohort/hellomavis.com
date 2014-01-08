@@ -16,14 +16,7 @@ $( document ).ready(
 		$( window ).scroll(
 			function ( )
 			{
-				if ( $( document ).scrollTop( ) < 280 )
-				{
-					$( 'header > .over' ).addClass( 'fade-hidden' ) ;
-				}
-				else
-				{
-					$( 'header > .over' ).removeClass( 'fade-hidden' ) ;
-				}
+				menu( ) ;
 
 				if ( isScrolling ) return ;
 
@@ -111,6 +104,18 @@ $( document ).ready(
 					background.height( maxHeight ) ;
 				}
 			) ;
+		}
+
+		function menu ( )
+		{
+			if ( $( document ).scrollTop( ) < 280 )
+			{
+				$( 'header > .over' ).addClass( 'fade-hidden' ) ;
+			}
+			else
+			{
+				$( 'header > .over' ).removeClass( 'fade-hidden' ) ;
+			}
 		}
 
 		function poll ( )
@@ -206,9 +211,7 @@ $( document ).ready(
 		function init ( )
 		{
 			update( ) ;
-
-			// $( 'ul#menu-primary-navigation' ).height( $( window ).height( ) ) ;
-			// data-toggle="collapse" data-target=".navbar-collapse"
+			menu( ) ;
 
 			$( 'ul#menu-primary-navigation > li' ).each(
 				function ( )
