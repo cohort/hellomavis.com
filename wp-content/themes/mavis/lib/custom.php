@@ -1,10 +1,5 @@
 <?php
 /**
- * Custom functions
- */
-add_theme_support( 'custom-header' ) ;
-
-/**
 * Redirect
 */
 function mavis_init ( )

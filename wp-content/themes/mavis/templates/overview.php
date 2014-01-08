@@ -2,7 +2,7 @@
 <section id="overview" class="overview">
 	<div class="logo">
 		<div class="logo-image">
-			<img src="<?php echo get_header_image( ) ; ?>" alt="Mavis Logo" />
+			<img src="<?php echo get_stylesheet_directory_uri( ) ; ?>/assets/css/images/logo.png" alt="Mavis Logo" />
 		</div>
 	</div>
 
