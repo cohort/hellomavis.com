@@ -76,6 +76,17 @@ a:hover {
 	width: 100%;
 }
 
+.loading-overlay {
+	background: #fff url( 'images/ajax-loader.gif' ) no-repeat center center;
+	display: block;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
 .fade-hidden {
 	opacity: 0;
 }
@@ -449,6 +460,7 @@ section.jobs {
 
 				a.load_more_jobs {
 					background: none;
+					border: 0;
 					font-family: 'Archer Semibold', serif;
 					font-size: 1.2em;
 
@@ -504,6 +516,12 @@ section.jobs {
 								text-decoration: none;
 							}
 						}
+					}
+				}
+
+				ul.loading {
+					li {
+						opacity: .2;
 					}
 				}
 			}
@@ -682,6 +700,107 @@ section.contact {
 	}
 }
 
+article.job_listing, article.people {
+	background: $color-light-blue url( 'images/texture.png' );
+	padding: 0 7% 7%;
+
+	.logo {
+		padding-top: 13px;
+		width: 100%;
+
+		.logo-image {
+			margin: 0 auto;
+			width: 87px;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	header, .entry-content {
+		background: $color-cream !important;
+		padding: 0 21%;
+	}
+
+	header {
+		margin: 7% 0 0;
+		text-align: center;
+
+		h1 {
+			border-bottom: 3px solid $color-blue;
+			display: inline-block;
+			margin: 100px 0 60px;
+			padding: 0 0 7px 0;
+		}
+	}
+
+	.entry-content {
+		padding-bottom: 60px;
+
+		.details {
+			border-top: 1px solid $color-grey;
+			border-bottom: 1px solid $color-grey;
+			padding: 30px 0;
+
+			.detail {
+				margin: 0;
+				padding: 0;
+			}
+
+			.field {
+				font-family: 'Archer Semibold', serif;
+				font-size: 1.2em;
+				margin-bottom: 7px;
+			}
+		}
+
+		.content {
+			border-bottom: 1px solid $color-grey;
+			margin-top: 60px;
+			padding-bottom: 60px;
+
+			ul {
+				li {
+					margin: 5px 0;
+					padding-left: 5px;
+				}
+			}
+		}
+
+		.apply {
+			.heading {
+				font-family: 'Archer Book', serif;
+				font-size: 1.1em;
+				margin: 40px 0 30px;
+				padding: 0 14%;
+				text-align: center;
+
+				h2 {
+					border-bottom: 2px solid $color-blue;
+					display: inline-block;
+					font-family: 'Archer Semibold', serif;
+					font-size: 1.6em;
+					margin-bottom: 20px;
+					padding-bottom: 5px;
+				}
+			}
+
+			.contact {
+				font-family: 'Archer Book', serif;
+
+				.detail {
+					text-align: center;
+
+					.icon {
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
 footer {
 	background: $color-cream $footer-texture;
 	font-weight: 400;
@@ -691,7 +810,7 @@ footer {
 	width: 100%;
 }
 
-/* Tablet (Portrait) 
+/* Tablet (Portrait) */
 @media screen and (max-width: 768px) {
 
 	body {

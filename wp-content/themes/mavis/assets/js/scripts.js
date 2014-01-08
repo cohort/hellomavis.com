@@ -5,13 +5,21 @@ $( document ).ready(
 			hash = window.location.hash ,
 			isScrolling = false ,
 			canScroll = false ,
-			timeout = null ;
+			timeout = null ,
+			slider = $( '.flexslider' ) ;
 
-		$( '.flexslider' ).flexslider( {
-			animation : 'slide' ,
-			directionNav : false ,
-			start : init
-		} ) ;
+		if ( slider.length )
+		{
+			slider.flexslider( {
+				animation : 'slide' ,
+				directionNav : false ,
+				start : init
+			} ) ;
+		}
+		else
+		{
+			init( ) ;
+		}
 
 		$( window ).scroll(
 			function ( )
@@ -33,9 +41,10 @@ $( document ).ready(
 				var href = $( this ).attr( 'href' ) ,
 					http = new RegExp( 'http://' ).test( href ) ,
 					local = new RegExp( location.host ).test( href ) ,
-					email = new RegExp( 'mailto:' ).test( href ) ;
+					email = new RegExp( 'mailto:' ).test( href ) ,
+					sub = window.location.pathname.match( /\//g ).length > 2 ;
 
-				if ( ! email && ( ! http || ( http && local ) ) )
+				if ( ! email && ! sub && ( ! http || ( http && local ) ) )
 				{
 					e.preventDefault( ) ;
 					canScroll = true ;
@@ -108,7 +117,7 @@ $( document ).ready(
 
 		function menu ( )
 		{
-			if ( $( document ).scrollTop( ) < 280 )
+			if ( $( document ).scrollTop( ) < 10 )
 			{
 				$( 'header > .over' ).addClass( 'fade-hidden' ) ;
 			}
@@ -138,7 +147,7 @@ $( document ).ready(
 
 		function pushState ( page )
 		{
-			if ( page != state && window.history.pushState )
+			if ( page != undefined && page != state && window.history.pushState )
 			{
 				window.history.pushState( null , null , 'http://' + location.host + '/' + page ) ;
 			}
@@ -178,27 +187,30 @@ $( document ).ready(
 
 			var section = $( 'section[id="' + page + '"]' ) ;
 
-			if ( section.offset( ) )
+			if ( section.length )
 			{
-				var scrollTo = section.offset( ).top ;
-
-				if ( scrollTo != undefined )
+				if ( section.offset( ) )
 				{
-					$( 'html,body' ).animate(
-						{ scrollTop : scrollTo } ,
-						Math.max( Math.abs( scrollTo - $( window ).scrollTop( ) ) / 2 , 1000 ) ,
-						'easeInOutExpo' ,
-						onScrollToComplete
-					) ;
+					var scrollTo = section.offset( ).top ;
+
+					if ( scrollTo != undefined )
+					{
+						$( 'html,body' ).animate(
+							{ scrollTop : scrollTo } ,
+							Math.min( Math.max( Math.abs( scrollTo - $( window ).scrollTop( ) ) / 2 , 1000 ) , 2000 ),
+							'easeInOutExpo' ,
+							onScrollToComplete
+						) ;
+					}
+					else
+					{
+						isScrolling = false ;
+					}
 				}
 				else
 				{
-					isScrolling = false ;
+					resetActive( ) ;
 				}
-			}
-			else
-			{
-				resetActive( ) ;
 			}
 		}
 
@@ -212,6 +224,8 @@ $( document ).ready(
 		{
 			update( ) ;
 			menu( ) ;
+
+			$( '.loading-overlay' ).fadeOut( 400 ) ;
 
 			$( 'ul#menu-primary-navigation > li' ).each(
 				function ( )

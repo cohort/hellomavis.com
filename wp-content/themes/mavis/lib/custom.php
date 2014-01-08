@@ -11,8 +11,13 @@ function mavis_init ( )
 	{
 		if ( ! is_admin( ) && @$GLOBALS[ 'pagenow' ] != 'wp-login.php' )
 		{
-			header( 'Location: http://' . $host_url . '#' . $_SERVER[ REQUEST_URI ] ) ;
-			exit ;
+			$page = str_replace( '/' , '' , $_SERVER[ REQUEST_URI ] ) ;
+
+			if ( get_page_by_path( $page ) )
+			{
+				header( 'Location: http://' . $host_url . '#' . $_SERVER[ REQUEST_URI ] ) ;
+				exit ;
+			}
 		}
 	}
 }
@@ -41,19 +46,9 @@ wp_enqueue_style( 'mavis_main' , get_stylesheet_directory_uri( ) . '/assets/css/
 wp_register_script( 'easing' , get_stylesheet_directory_uri( ) . '/assets/js/vendor/easing/jquery.easing-1.3.min.js' , array( 'jquery' ) , null , false ) ;
 wp_register_script( 'viewport' , get_stylesheet_directory_uri( ) . '/assets/js/plugins/viewport/jquery.viewport.min.js' , array( 'jquery' ) , null , true ) ;
 wp_register_script( 'flexslider' , get_stylesheet_directory_uri( ) . '/assets/js/plugins/flexslider/jquery.flexslider-min.js' , array( 'jquery' ) , null , true ) ;
-wp_register_script( 'mavis_scripts' , get_stylesheet_directory_uri( ) . '/assets/js/scripts.js' , array( 'jquery' , 'flexslider' ) , null , true ) ;
+wp_register_script( 'mavis_scripts' , get_stylesheet_directory_uri( ) . '/assets/js/scripts.min.js' , array( 'jquery' , 'flexslider' ) , null , true ) ;
 
 wp_enqueue_script( 'easing' ) ;
 wp_enqueue_script( 'viewport' ) ;
 wp_enqueue_script( 'flexslider' ) ;
 wp_enqueue_script( 'mavis_scripts' ) ;
-
-/**
- * Add and remove body_class() classes
- */
-function mavis_body_class ( $classes )
-{
-	// $classes[ ] = 'hidden' ;
-	return $classes;
-}
-add_filter( 'body_class' , 'mavis_body_class' ) ;

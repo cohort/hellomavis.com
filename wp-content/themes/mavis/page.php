@@ -3,3 +3,4 @@
 <?php get_template_part( 'templates/jobs' , 'jobs' ) ; ?>
 <?php get_template_part( 'templates/about' , 'about' ) ; ?>
 <?php get_template_part( 'templates/contact' , 'contact' ) ; ?>
+<?php get_template_part( 'templates/page-footer' , 'footer' ) ; ?>
