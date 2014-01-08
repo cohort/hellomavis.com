@@ -14,8 +14,11 @@ function mavis_init ( )
 
 	if ( $_SERVER[ REQUEST_METHOD ] == 'GET' && $full_url != $host_url )
 	{
-		header( 'Location: http://' . $host_url . '#' . $_SERVER[ REQUEST_URI ] ) ;
-		exit ;
+		if ( ! is_admin( ) && @$GLOBALS[ 'pagenow' ] != 'wp-login.php' )
+		{
+			header( 'Location: http://' . $host_url . '#' . $_SERVER[ REQUEST_URI ] ) ;
+			exit ;
+		}
 	}
 }
 add_action( 'init' , 'mavis_init' ) ;

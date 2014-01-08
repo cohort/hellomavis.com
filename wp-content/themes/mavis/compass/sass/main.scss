@@ -336,7 +336,7 @@ section.working-together {
 			text-align: center;
 
 			h1 {
-				border-bottom: 3px solid $color-orange;
+				border-bottom: 4px solid $color-orange;
 				display: inline-block;
 			}
 		}
@@ -367,6 +367,92 @@ section.working-together {
 	}
 }
 
+section.jobs {
+	background: $color-light-blue $background-texture;
+	padding: 7%;
+
+	.inner {
+		background-color: $color-cream;
+		padding: 7% 14%;
+
+		.title {
+			width: 100%;
+			text-align: center;
+
+			h1 {
+				border-bottom: 4px solid $color-blue;
+				display: inline-block;
+			}
+		}
+
+		.content {
+			margin-top: 60px;
+
+			.job_listings {
+
+
+				.job_filters {
+					background: none;
+
+					.search_jobs {
+						font-size: .9em;
+
+						> div {
+							> label {
+								display: inline-block;
+								float: left;
+								line-height: 32px;
+								width: 100px;
+							}
+
+							.select-box {
+								background: $color-cream;
+								border: 1px solid $color-mid-grey;
+								margin-left: 100px;
+								position: relative;
+								width: auto;
+
+								-webkit-border-radius: 5px;
+								-moz-border-radius: 5px;
+								border-radius: 5px;
+
+								select {
+									background: transparent;
+									border: 0;
+									border-radius: 0;
+									height: 34px;
+									letter-spacing: 0;
+									padding: 4px 8px;
+									width: 100%;
+
+									-webkit-appearance: none;
+
+									option {
+										background: #fff;
+										border: 0;
+									}
+								}
+							}
+
+							.select-box:after {
+									background: url( 'images/dropdown-arrow.png' ) no-repeat;
+									content: '';
+									display: block;
+									height: 34px;
+									pointer-events: none;
+									position: absolute;
+									right: 2px;
+									top: 0;
+									width: 34px;
+								}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 section.about {
 	background: $color-orange $background-texture;
 	color: #fff;
@@ -380,7 +466,7 @@ section.about {
 			text-align: center;
 
 			h1 {
-				border-bottom: 3px solid #fff;
+				border-bottom: 4px solid #fff;
 				display: inline-block;
 			}
 		}
@@ -470,7 +556,7 @@ section.contact {
 			text-align: center;
 
 			h1 {
-				border-bottom: 3px solid $color-orange;
+				border-bottom: 4px solid $color-orange;
 				display: inline-block;
 			}
 		}
@@ -547,7 +633,7 @@ footer {
 	width: 100%;
 }
 
-/* Tablet (Portrait) */
+/* Tablet (Portrait) 
 @media screen and (max-width: 768px) {
 
 	body {
@@ -644,6 +730,31 @@ footer {
 
 /* Mobile */
 @media screen and (max-width: 767px) {
+
+	section.jobs {
+		.inner {
+			.content {
+				.job_listings {
+					.job_filters {
+						.search_jobs {
+							> div {
+								width: 100%;
+
+								> label, > select {
+									float: none;
+									margin: 10px 0;
+								}
+
+								.select-box {
+									margin: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
 	section.contact {
 		.inner {
