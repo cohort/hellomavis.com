@@ -8,15 +8,15 @@
 	<?php else : ?>
 
 		<div class="details row">
-			<div class="detail col-md-4">
+			<div class="detail col-md-4 col-sm-4">
 				<div class="field">Location</div>
 				<div class="value"><?php the_job_location( ) ; ?></div>
 			</div>
-			<div class="detail col-md-4">
+			<div class="detail col-md-4 col-sm-4">
 				<div class="field">Job Term</div>
 				<div class="value"><?php the_job_type( ) ; ?></div>
 			</div>
-			<div class="detail col-md-4">
+			<div class="detail col-md-4 col-sm-4">
 			<?php if ( $post->_job_salary ) : ?>
 				<div class="field">Salary</div>
 				<div class="value"><?php echo $post->_job_salary ; ?></div>

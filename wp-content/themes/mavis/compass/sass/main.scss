@@ -802,7 +802,7 @@ article.job_listing, article.people {
 
 			ul {
 				li {
-					margin: 5px 0;
+					margin: 10px -5px;
 					padding-left: 5px;
 				}
 			}
@@ -853,10 +853,6 @@ footer {
 /* Tablet (Portrait) */
 @media screen and (max-width: 768px) {
 
-	body {
-		font-size: 16px;
-	}
-
 	h1 {
 		font-size: 2em;
 		line-height: 135%;
@@ -867,7 +863,6 @@ footer {
 			height: 240px;
 
 			.logo-image {
-				margin: 90px auto;
 				width: 190px;
 
 				img {
@@ -922,7 +917,33 @@ footer {
 				}
 
 				.last_column {
-					margin-top: 25px;
+					margin-top: 30px;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	section.jobs {
+		.inner {
+			padding: 5% 8%;
+
+			.content {
+				.job_listings {
+					.job_filters {
+						.search_jobs {
+							> div {
+								> label, > select {
+									float: none;
+									margin: 4px 0;
+								}
+
+								.select-box {
+									margin: 0;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -943,6 +964,21 @@ footer {
 			}
 		}
 	}
+
+	article.job_listing, article.people {
+		.entry-content {
+			padding-left: 12%;
+			padding-right: 12%;
+
+			.apply {
+				.contact {
+					.detail {
+						margin-bottom: 50px;
+					}
+				}
+			}
+		}
+	}
 }
 
 /* Mobile */
@@ -958,12 +994,7 @@ footer {
 								width: 100%;
 
 								> label, > select {
-									float: none;
 									margin: 10px 0;
-								}
-
-								.select-box {
-									margin: 0;
 								}
 							}
 						}
