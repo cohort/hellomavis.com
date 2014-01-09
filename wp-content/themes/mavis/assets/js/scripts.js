@@ -98,7 +98,7 @@ $( document ).ready(
 				{
 					var background = $( '.slide-background' , $( this ) ) ;
 					background.width( $( window ).width( ) ) ;
-					background.height( Math.max( $( window ).height( ) , 720 ) ) ;
+					background.height( Math.max( $( window ).height( ) , background.css( 'min-height' ).replace( /[^-\d\.]/g , ' ' ) ) ) ;
 				}
 			) ;
 		}

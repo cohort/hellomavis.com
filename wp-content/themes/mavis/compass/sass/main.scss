@@ -252,6 +252,8 @@ section.overview {
 			width: 100%;
 
 			.slide-background {
+				min-height: 720px;
+
 				-webkit-background-size: cover;
 				-moz-background-size: cover;
 				-o-background-size: cover;
@@ -284,7 +286,7 @@ section.overview {
 				blockquote {
 					border: 0;
 					font-family: 'Archer Semibold', serif;
-					font-size: 3em;
+					font-size: 1.6em;
 					margin: 0 0 20px 0;
 					padding: 0;
 				}
@@ -384,7 +386,7 @@ section.working-together {
 				padding: 0;
 
 				li {
-					font-family: 'Archer Book', serif;
+					font-family: 'Archer Medium', serif;
 					font-size: 1.3em;
 					margin-bottom: 1px;
 				}
@@ -420,6 +422,7 @@ section.jobs {
 
 					.search_jobs {
 						font-size: .9em;
+						padding: 16px;
 
 						.job-term {
 							padding: 0;
@@ -860,8 +863,6 @@ footer {
 
 	section.overview {
 		.logo {
-			height: 240px;
-
 			.logo-image {
 				width: 190px;
 
@@ -878,23 +879,12 @@ footer {
 
 			.slide {
 				.slide-content {
-					top: 300px;
-
-					h2 {
-						font-size: 1.6em;
-					}
-
 					> div {
 						width: 540px;
 					}
 
 					blockquote {
-						font-size: 2em;
-					}
-
-					.link {
-						top: 280px;
-						width: 100%;
+						font-size: 1.2em;
 					}
 
 					.latest-job {
@@ -982,11 +972,120 @@ footer {
 }
 
 /* Mobile */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
+
+	body {
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	h1 {
+		font-size: 1.8em;
+	}
+
+	section.overview {
+		h1 {
+			font-size: 1.6em;
+		}
+
+		.logo {
+			height: 20%;
+			min-height: 0;
+
+			.logo-image {
+				width: 140px;
+
+				img {
+					width: 100%;
+				}
+			}
+		}	
+
+		.flexslider {
+			.flex-control-nav {
+				bottom: 35px;
+			}
+
+			.slide {
+				.slide-background {
+					min-height: 480px;
+				}
+
+				.slide-content {
+					top: 20%;
+
+					> div {
+						width: 80%;
+					}
+
+					blockquote {
+						font-size: 1.2em;
+					}
+
+					.introduction {
+						margin-top: 30px;
+					}
+
+					.latest-job {
+						margin-top: 30px;
+
+						h2 {
+							font-size: 1.2em;
+						}
+
+						.latest-job-box {
+							.inner {
+								padding: 10px;
+								width: 100%;
+
+								ul.details {
+									list-style-type: none;
+									margin: 10px 0 0 0;
+									padding: 0;
+
+									li {
+										font-family: 'Archer Book', serif;
+										font-size: 1.8em;
+										margin: 0;
+										padding: 0;
+									}
+								}
+							}
+						}
+					}
+
+					.testimonial {
+						font-size: .8em;
+						margin-top: 30px;
+					}
+				}
+
+				.link {
+					bottom: 80px;
+					font-family: 'Archer Bold', serif;
+					font-size: 1.1em;
+				}
+			}
+		}	
+	}
+
+	section.working-together {
+		.inner {
+			.content {
+				margin-top: 30px;
+
+				.last_column {
+					margin: 0;
+				}
+			}
+		}
+	}
 
 	section.jobs {
 		.inner {
 			.content {
+				margin-top: 0;
+
 				.job_listings {
 					.job_filters {
 						.search_jobs {
@@ -997,7 +1096,33 @@ footer {
 									margin: 10px 0;
 								}
 							}
+
+							.job-type {
+								padding-left: 0;
+							}
 						}
+					}
+
+					ul.job_listings {
+						li.job-listing {
+							.details {
+								margin-bottom: 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	section.about {
+		.people {
+			.person {
+				.column:not(:first-child) {
+					padding-top: 0;
+
+					h2.name {
+						margin-top: 0;
 					}
 				}
 			}
