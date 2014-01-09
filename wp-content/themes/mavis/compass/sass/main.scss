@@ -43,7 +43,8 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 	font-weight: 300;
-	letter-spacing: 1px;
+	letter-spacing: .4px;
+	line-height: normal;
 }
 
 h1 {
@@ -51,7 +52,7 @@ h1 {
 	font-size: 2.6em;
 	font-weight: 300;
 	letter-spacing: 0;
-	line-height: 125%;
+	line-height: 124%;
 	margin: 0;
 }
 
@@ -202,14 +203,21 @@ section.overview {
 	.logo {
 		background: $background-texture;
 		display: block;
-		height: 320px;
+		height: 33%;
+		min-height: 160px;
 		position: absolute;
 		width: 100%;
 		z-index: 1;
 
 		.logo-image {
-			margin: 125px auto;
+			left: 50%;
+			position: absolute;
+			top: 50%;
 			width: 250px;
+
+			img {
+				margin: -35px 0 0 -50%;
+			}
 		}
 	}
 
@@ -224,7 +232,7 @@ section.overview {
 		}
 
 		.flex-control-nav {
-			bottom: 50px;
+			bottom: 35px;
 
 			li {
 				a {
@@ -243,11 +251,18 @@ section.overview {
 			position: relative;
 			width: 100%;
 
+			.slide-background {
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+			}
+
 			.slide-content {
 				color: #fff;
 				display: block;
 				position: absolute;
-				top: 440px;
+				top: 35%;
 				width: 100%;
 
 				h1 {
@@ -255,13 +270,7 @@ section.overview {
 				}
 
 				h2 {
-					font-family: 'Archer Medium', serif;
-					font-size: 1.6em;
-					margin: 10px 0 0 0;
-				}
-
-				h3 {
-					font-family: 'Archer Bold', serif;
+					font-family: 'Archer Semibold', serif;
 					font-size: 1em;
 					margin-bottom: 20px;
 				}
@@ -280,25 +289,8 @@ section.overview {
 					padding: 0;
 				}
 
-				.link {
-					font-family: 'Archer Bold', serif;
-					font-size: 1em;
-					letter-spacing: 1px;
-					position: absolute;
-					text-align: center;
-					text-transform: uppercase;
-					top: 410px;
-					width: 100%;
-
-					a {
-						border-bottom: 1px solid #fff;
-						color: #fff;
-						text-decoration: none;
-					}
-				}
-
 				.introduction {
-					margin-top: 60px;
+					margin-top: 50px;
 				}
 
 				.latest-job {
@@ -312,22 +304,44 @@ section.overview {
 						.inner {
 							background-color: $color-blue;
 							display: block;
-							padding: 50px;
+							padding: 45px;
 							width: 100%;
+
+							ul.details {
+								list-style-type: none;
+								margin-top: 15px;
+
+								li {
+									font-family: 'Archer Book', serif;
+									font-size: 1.8em;
+									margin: 0;
+									padding: 0;
+								}
+							}
 						}
 					}
 				}
 
 				.testimonial {
-					margin-top: 60px;
+					margin-top: 50px;
 				}
 			}
 
-			.slide-background {
-				-webkit-background-size: cover;
-				-moz-background-size: cover;
-				-o-background-size: cover;
-				background-size: cover;
+			.link {
+				bottom: 115px;
+				font-family: 'Archer Semibold', serif;
+				font-size: 1em;
+				letter-spacing: 1px;
+				position: absolute;
+				text-align: center;
+				text-transform: uppercase;
+				width: 100%;
+
+				a {
+					border-bottom: 1px solid #fff;
+					color: #fff;
+					text-decoration: none;
+				}
 			}
 		}
 	}
@@ -335,11 +349,11 @@ section.overview {
 
 section.working-together {
 	background: $color-orange $background-texture;
-	padding: 7%;
+	padding: 8% 7%;
 
 	.inner {
 		background-color: $color-cream;
-		padding: 7%;
+		padding: 5% 8%;
 		width: 100%;
 
 		.title {
@@ -347,7 +361,7 @@ section.working-together {
 			text-align: center;
 
 			h1 {
-				border-bottom: 4px solid $color-orange;
+				border-bottom: 3px solid $color-orange;
 				display: inline-block;
 			}
 		}
@@ -355,23 +369,24 @@ section.working-together {
 		.content {
 			margin-top: 60px;
 
-			.one_half:not(.last_column) {
-				padding: 0 40px 0 0;
+			.last_column {
+				padding: 0 0 0 30px;
 			}
 
 			p {
+				line-height: 128%;
 				margin-bottom: 20px;
 			}
 
 			ul {
 				list-style: none;
-				margin: 20px 0;
+				margin: 17px 0 0 0;
 				padding: 0;
 
 				li {
-					font-family: 'Archer Medium', serif;
-					font-size: 1.2em;
-					margin-bottom: 2px;
+					font-family: 'Archer Book', serif;
+					font-size: 1.3em;
+					margin-bottom: 1px;
 				}
 			}
 		}
@@ -380,24 +395,24 @@ section.working-together {
 
 section.jobs {
 	background: $color-light-blue $background-texture;
-	padding: 7%;
+	padding: 8% 7%;
 
 	.inner {
 		background-color: $color-cream;
-		padding: 7% 14%;
+		padding: 5% 17%;
 
 		.title {
 			width: 100%;
 			text-align: center;
 
 			h1 {
-				border-bottom: 4px solid $color-blue;
+				border-bottom: 3px solid $color-blue;
 				display: inline-block;
 			}
 		}
 
 		.content {
-			margin-top: 60px;
+			margin-top: 33px;
 
 			.job_listings {
 				.job_filters {
@@ -405,6 +420,14 @@ section.jobs {
 
 					.search_jobs {
 						font-size: .9em;
+
+						.job-term {
+							padding: 0;
+						}
+
+						.job-type {
+							padding: 0 0 0 30px;
+						}
 
 						> div {
 							> label {
@@ -463,10 +486,16 @@ section.jobs {
 					border: 0;
 					font-family: 'Archer Semibold', serif;
 					font-size: 1.2em;
+					text-decoration: none;
 
 					&:hover {
 						background: none;
-						color: #000;
+						color: $color-grey;
+					}
+
+					:before {
+						content: '+';
+						padding-right: 5px;
 					}
 
 					strong {
@@ -476,32 +505,37 @@ section.jobs {
 
 				ul.job_listings {
 					border-bottom: 1px solid $color-mid-grey;
+					border-top: 0;
 					font-size: .9em;
 					list-style-type: none;
-					margin-bottom: 30px;
-					padding-bottom: 30px;
+					margin: 0 0 30px 0;
+					padding: 0 0 30px 0;
 
 					li.job-listing {
 						border-top: 1px solid $color-mid-grey;
-						margin-top: 30px;
-						padding-top: 15px;
+						margin: 15px 0;
+						padding: 10px 0;
 
 						h3 {
 							font-family: 'Archer Semibold', serif;
 							font-size: 1.6em;
 						}
 
-						.details, .link {
-							margin-top: 10px;
+						.details {
+							.location {
+								margin-bottom: 2px;
+							}
 						}
 
 						.link {
+							padding-top: 5px;
+
 							a {
 								background: $color-light-blue;
 								color: #fff;
 								display: block;
 								font-family: 'Archer Medium', serif;
-								padding: 8px 0;
+								padding: 10px 0;
 								text-align: center;
 								text-transform: uppercase;
 								width: 100%;
@@ -532,7 +566,7 @@ section.jobs {
 section.about {
 	background: $color-orange $background-texture;
 	color: #fff;
-	padding: 7%;
+	padding: 8% 6%;
 
 	.quote {
 		width: 100%;
@@ -542,7 +576,7 @@ section.about {
 			text-align: center;
 
 			h1 {
-				border-bottom: 4px solid #fff;
+				border-bottom: 3px solid #fff;
 				display: inline-block;
 			}
 		}
@@ -550,13 +584,14 @@ section.about {
 		.content {
 			background-color: $color-orange;
 			margin-top: 30px;
-			padding: 7% 17%;
+			padding: 5% 14%;
 			text-align: center;
 
 			blockquote {
 				border: 0;
-				font-family: 'Archer Semibold', serif;
+				font-family: 'Archer Medium', serif;
 				font-size: 1.6em;
+				line-height: 128%;
 				margin: 0 0 20px 0;
 				padding: 0;
 			}
@@ -570,7 +605,7 @@ section.about {
 			margin: 30px 0;
 			padding-left: 30px;
 
-			.col-md-4, .col-md-8 {
+			.column {
 				margin: 0;
 				padding: 30px 30px 30px 0;
 			}
@@ -584,10 +619,11 @@ section.about {
 			h2.name {
 				font-family: 'Archer Medium', serif;
 				font-size: 1.6em;
-				margin: 0 0 30px 0;
+				margin: 30px 0;
 			}
 
 			.bio {
+				font-size: .9em;
 				margin: 0 7% 0 0;
 				position: relative;
 
@@ -600,22 +636,26 @@ section.about {
 				}
 
 				.links {
-					padding: 70px 0;
+					padding: 22px 0 60px;
 					position: relative;
 					width: 100%;
 
 					a.more-link, a.close-link {
 						border-top: 1px solid $color-grey;
 						display: block;
-						font-family: 'Archer Semibold', serif;
-						font-size: 1.2em;
+						font-family: 'Archer Medium', serif;
+						font-size: 1.5em;
 						text-decoration: none;
-						padding-top: 20px;
+						padding-top: 15px;
 						position: absolute;
 						width: inherit;			
 					}
 				}
 			}
+		}
+
+		.person:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
@@ -632,7 +672,7 @@ section.contact {
 			text-align: center;
 
 			h1 {
-				border-bottom: 4px solid $color-orange;
+				border-bottom: 3px solid $color-orange;
 				display: inline-block;
 			}
 		}

@@ -92,25 +92,13 @@ $( document ).ready(
 
 		function update ( e )
 		{
-			var maxHeight = 0 ,
-				extraHeight = $( window ).width( ) > 768 ? 720 : 460 ;
-
-			// Loop through slides and find maximum height.
-			$( '.slide' ).each(
-				function ( )
-				{
-					var content = $( '.slide-content' , $( this ) ) ;
-					maxHeight = Math.max( maxHeight , content.outerHeight( ) + extraHeight )
-				}
-			) ;
-
 			// Set slide width and height.
 			$( '.slide' ).each(
 				function ( )
 				{
 					var background = $( '.slide-background' , $( this ) ) ;
 					background.width( $( window ).width( ) ) ;
-					background.height( maxHeight ) ;
+					background.height( Math.max( $( window ).height( ) , 720 ) ) ;
 				}
 			) ;
 		}

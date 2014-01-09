@@ -40,11 +40,13 @@ class Mavis_Job_Manager_Shortcodes
 
 			<div class="inner">
 				<h1><?php the_title( ) ; ?></h1>
-				<h2><?php the_field( '_job_location' , $post->ID ) ; ?></h2>
-				<?php if ( get_field( '_job_salary' , $post->ID ) ) : ?>
-				<h2>Salary: <?php the_field( '_job_salary' , $post->ID ) ; ?></h2>
-				<?php elseif ( get_field( '_job_day_rate' , $post->ID ) ) : ?>
-				<h2>Day Rate: <?php the_field( '_job_day_rate' , $post->ID ) ; ?></h2>
+				<ul class="details">
+					<li><?php the_field( '_job_location' , $post->ID ) ; ?>,</li>
+					<?php if ( get_field( '_job_salary' , $post->ID ) ) : ?>
+					<li>Salary: <?php the_field( '_job_salary' , $post->ID ) ; ?></li>
+					<?php elseif ( get_field( '_job_day_rate' , $post->ID ) ) : ?>
+					<li>Day Rate: <?php the_field( '_job_day_rate' , $post->ID ) ; ?></li>
+				</ul>
 				<?php endif ; ?>
 			</div>
 

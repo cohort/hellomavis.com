@@ -37,9 +37,9 @@
 					<div class="slide-background" style="background-color: <?php echo $background_colour ; ?> !important;background-image: url('<?php echo $background_image[ 'url' ] ; ?>') !important"></div>
 					<div class="slide-content">
 						<div class="<?php echo $child->post_name ; ?>"><?php echo do_shortcode( $child->post_content ) ; ?></div>
-						<div class="link">
-							<a href="<?php echo the_field( 'page-link-url' , $child->ID ) ; ?>" title="About"><?php echo the_field( 'page-link-title' , $child->ID ) ; ?></a>
-						</div>
+					</div>
+					<div class="link">
+						<a href="<?php echo the_field( 'page-link-url' , $child->ID ) ; ?>" title="About"><?php echo the_field( 'page-link-title' , $child->ID ) ; ?></a>
 					</div>
 				</div>
 			</li>
