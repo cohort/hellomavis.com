@@ -6,6 +6,7 @@ $( document ).ready(
 			isScrolling = false ,
 			canScroll = false ,
 			timeout = null ,
+			title = $( 'title' ).text( ) ,
 			slider = $( '.flexslider' ) ;
 
 		if ( slider.length )
@@ -156,6 +157,9 @@ $( document ).ready(
 				{
 					if ( page == cleanUrl( $( 'a' , $( this ) ).attr( 'href' ) ) )
 					{
+						var section = $( 'a' , $( this ) ).attr( 'title' ) ;
+						document.title = ( section != undefined ? section + ' | ' : '' ) + title ;
+
 						$( this ).addClass( 'active' ) ;
 					}
 					else
