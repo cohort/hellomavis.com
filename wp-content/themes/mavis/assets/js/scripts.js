@@ -14,7 +14,9 @@ $( document ).ready(
 			slider.flexslider( {
 				animation : 'slide' ,
 				directionNav : false ,
-				start : init
+				start : init ,
+				before : update ,
+				after : update
 			} ) ;
 		}
 		else
