@@ -866,6 +866,34 @@ footer {
 	width: 100%;
 }
 
+/* < 1000px */
+@media screen and (max-width: 1000px) {
+
+	section.jobs {
+		.inner {
+			.content {
+				.job_listings {
+					.job_filters {
+						.search_jobs {
+							> div {
+								> label, > select {
+									float: none;
+									margin: 4px 0;
+								}
+
+								.select-box {
+									margin: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
 /* Tablet (Portrait) */
 @media screen and (max-width: 768px) {
 
@@ -930,25 +958,6 @@ footer {
 	section.jobs {
 		.inner {
 			padding: 5% 8%;
-
-			.content {
-				.job_listings {
-					.job_filters {
-						.search_jobs {
-							> div {
-								> label, > select {
-									float: none;
-									margin: 4px 0;
-								}
-
-								.select-box {
-									margin: 0;
-								}
-							}
-						}
-					}
-				}
-			}
 		}
 	}
 
@@ -984,23 +993,10 @@ footer {
 	}
 }
 
-/* Mobile */
-@media screen and (max-width: 480px) {
-
-	body {
-		font-size: 16px;
-		font-weight: 400;
-	}
-
-	h1 {
-		font-size: 1.8em;
-	}
+/* < 767px */
+@media screen and (max-width: 767px) {
 
 	section.overview {
-		h1 {
-			font-size: 1.6em;
-		}
-
 		.logo {
 			height: 20%;
 			min-height: 0;
@@ -1035,13 +1031,7 @@ footer {
 						font-size: 1.2em;
 					}
 
-					.introduction {
-						margin-top: 30px;
-					}
-
 					.latest-job {
-						margin-top: 30px;
-
 						h2 {
 							font-size: 1.2em;
 						}
@@ -1066,11 +1056,6 @@ footer {
 							}
 						}
 					}
-
-					.testimonial {
-						font-size: .8em;
-						margin-top: 30px;
-					}
 				}
 
 				.link {
@@ -1080,18 +1065,6 @@ footer {
 				}
 			}
 		}	
-	}
-
-	section.working-together {
-		.inner {
-			.content {
-				margin-top: 30px;
-
-				.last_column {
-					margin: 0;
-				}
-			}
-		}
 	}
 
 	section.jobs {
@@ -1142,12 +1115,86 @@ footer {
 		}
 	}
 
+	article.job_listing, article.people {
+		.entry-content {
+			.details {
+				text-align: center;
+
+				.detail:not(:last-child) {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+
+	body {
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	h1 {
+		font-size: 1.8em;
+	}
+
+	section.overview {
+		h1 {
+			font-size: 1.6em;
+		}
+				
+		.flexslider {
+			.slide {
+				.slide-content {
+					.introduction {
+						margin-top: 30px;
+					}
+
+					.latest-job {
+						margin-top: 30px;
+					}					
+
+					.testimonial {
+						font-size: .8em;
+						margin-top: 30px;
+					}
+				}
+			}
+		}	
+	}	
+
+	section.working-together {
+		.inner {
+			.content {
+				margin-top: 30px;
+
+				.last_column {
+					margin: 0;
+				}
+			}
+		}
+	}
+
 	section.contact {
 		.inner {
 			.details {
 				.detail {
 					height: auto;
 					margin-bottom: 30px;
+				}
+			}
+
+			.social {
+				padding-left: 21%;
+				padding-right: 21%;
+
+				ul {
+					li {
+						margin-top: 15px;
+					}
 				}
 			}
 		}
@@ -1166,14 +1213,6 @@ footer {
 
 		.entry-content {
 			padding-bottom: 60px;
-
-			.details {
-				text-align: center;
-
-				.detail:not(:last-child) {
-					margin-bottom: 15px;
-				}
-			}
 
 			.content {
 				border-bottom: 1px solid $color-grey;
