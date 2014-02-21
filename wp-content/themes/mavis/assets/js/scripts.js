@@ -14,6 +14,7 @@ $( document ).ready(
 			slider.flexslider( {
 				animation : 'slide' ,
 				directionNav : false ,
+				slideshowSpeed : 10000 ,
 				start : init ,
 				before : update ,
 				after : update
