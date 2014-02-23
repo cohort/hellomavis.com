@@ -31,6 +31,8 @@ class Mavis_Job_Manager {
 		if ( is_admin( ) )
 			include( 'includes/admin/class-mavis-job-manager-admin.php' ) ;
 
+		register_activation_hook( basename( dirname( __FILE__ ) ) . '/' . basename( __FILE__ ) , create_function( '' , 'include_once( "includes/class-mavis-job-manager-install.php" ) ;' ) , 10 ) ;
+
 		add_action( 'wp_enqueue_scripts' , array( $this , 'frontend_scripts' ) ) ;
 	}
 

@@ -16,8 +16,8 @@ $( document ).ready(
 				directionNav : false ,
 				slideshowSpeed : 10000 ,
 				start : init ,
-				before : update ,
-				after : update
+				before : beforeSlide ,
+				after : afterSlide
 			} ) ;
 		}
 		else
@@ -87,11 +87,29 @@ $( document ).ready(
 
 		function cleanUrl ( url )
 		{
-			url = url.replace( 'http://' + window.location.host , '' ) ;
-			url = url.replace( '#' , '' ) ;
-			url = url.replace( /^\/|\/$/g, '' ) ;
+			if ( url )
+			{
+				url = url.replace( 'http://' + window.location.host , '' ) ;
+				url = url.replace( '#' , '' ) ;
+				url = url.replace( /^\/|\/$/g, '' ) ;
+			}
 
 			return url ;
+		}
+
+		function beforeSlide ( e )
+		{
+			if ( slider.data( 'flexslider' ).currentSlide != 2 )
+			{
+				randomTestimonial( ) ;
+			}
+
+			update( ) ;
+		}
+
+		function afterSlide ( e )
+		{
+			update( ) ;
 		}
 
 		function update ( e )
@@ -213,6 +231,38 @@ $( document ).ready(
 		{
 			isScrolling = false ;
 			setActive( state ) ;
+		}
+
+		function randomTestimonial ( )
+		{
+			var testimonials = [ ] ,
+				testimonial = null ,
+				li = $( 'ul.testimonials > li' ) ;
+
+			if ( li.length > 1 )
+			{
+				li.each(
+					function ( )
+					{
+						testimonial = $( this ) ;
+
+						if ( testimonial.css( 'display' ) == 'none' )
+						{
+							testimonials.push( testimonial ) ;
+						}
+
+						testimonial.hide( ) ;
+					}
+				) ;
+
+				testimonial = testimonials[ Math.floor( Math.random( ) * testimonials.length ) ] ;
+			}
+			else
+			{
+				testimonial = li ;
+			}
+
+			testimonial.show( ) ;
 		}
 
 		function init ( )

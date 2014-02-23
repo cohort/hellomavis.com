@@ -58,7 +58,7 @@
 						<img src="<?php echo $icon[ 'url' ] ; ?>" alt="<?php echo $icon[ 'alt' ] ; ?>" />
 					</div>
 					<div class="copy">
-						<a href="mailto:<?php echo the_field( 'email_address' , $post->ID ) ; ?>"><?php echo the_field( 'email_address' , $post->ID ) ; ?></a>
+						<?php echo the_field( 'email_address' , $post->ID ) ; ?>
 					</div>
 				</div>
 				<div class="detail telephone-numbers col-md-4 col-sm-12">

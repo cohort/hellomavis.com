@@ -21,6 +21,7 @@ function mavis_init ( )
 		}
 	}
 }
+
 add_action( 'init' , 'mavis_init' ) ;
 
 /**

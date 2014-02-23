@@ -40,9 +40,7 @@ function people_edit_columns ( $columns )
 {  
 	$columns = array(  
 		'cb' => '<input type=\'checkbox\' />' ,
-		'title' => 'Title' ,
-		'description' => 'Description' ,
-		'type' => 'Type'
+		'title' => 'Title'
 	) ;
 
 	return $columns ;  

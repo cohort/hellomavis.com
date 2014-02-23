@@ -284,12 +284,26 @@ section.overview {
 					width: 700px;
 				}
 
-				blockquote {
-					border: 0;
-					font-family: 'Archer Semibold', serif;
-					font-size: 1.6em;
-					margin: 0 0 20px 0;
+				ul.testimonials {
+					list-style-type: none;
+					margin: 0;
 					padding: 0;
+					position: relative;
+
+					li {
+						display: none;
+						left: 0;
+						position: absolute;
+						top: 0;
+
+						blockquote {
+							border: 0;
+							font-family: 'Archer Semibold', serif;
+							font-size: 1.6em;
+							margin: 0 0 20px 0;
+							padding: 0;
+						}
+					}
 				}
 
 				.introduction {
