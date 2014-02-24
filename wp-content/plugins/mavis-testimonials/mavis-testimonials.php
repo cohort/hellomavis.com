@@ -1,8 +1,8 @@
 <?php
 
 /*
-Plugin Name: Testimonials
-Plugin URI: 
+Plugin Name: Mavis Testimonials
+Plugin URI: http://www.hellomavis.com
 Description: Creates a "Testimonials" custom post type.
 Version: 1.0
 Author: Robert Sargent

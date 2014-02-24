@@ -1,8 +1,8 @@
 <?php
 
 /*
-Plugin Name: People
-Plugin URI: 
+Plugin Name: Mavis People
+Plugin URI: http://www.hellomavis.com
 Description: Creates a "People" custom post type.
 Version: 1.0
 Author: Robert Sargent
