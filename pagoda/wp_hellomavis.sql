@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 24, 2014 at 06:07 PM
+-- Generation Time: Feb 24, 2014 at 06:23 PM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.17
 
@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=344 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=346 ;
 
 --
 -- Dumping data for table `wp_options`
@@ -208,7 +208,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (97, 'widget_meta', 'a:2:{i:2;a:1:{s:5:"title";s:0:"";}s:12:"_multiwidget";i:1;}', 'yes'),
 (98, 'sidebars_widgets', 'a:4:{s:19:"wp_inactive_widgets";a:0:{}s:15:"sidebar-primary";a:7:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";i:6;s:20:"widget_recent_jobs-2";}s:14:"sidebar-footer";a:0:{}s:13:"array_version";i:3;}', 'yes'),
 (99, 'cron', 'a:6:{i:1388395017;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1388395025;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1388401232;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1388431320;a:1:{s:20:"wp_maybe_auto_update";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1393155506;a:1:{s:34:"job_manager_check_for_expired_jobs";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}s:7:"version";i:2;}', 'yes'),
-(100, '_transient_doing_cron', '1393265206.0957190990447998046875', 'yes'),
+(100, '_transient_doing_cron', '1393266150.2019109725952148437500', 'yes'),
 (101, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:2:{i:0;O:8:"stdClass":10:{s:8:"response";s:7:"upgrade";s:8:"download";s:41:"https://wordpress.org/wordpress-3.8.1.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:41:"https://wordpress.org/wordpress-3.8.1.zip";s:10:"no_content";s:52:"https://wordpress.org/wordpress-3.8.1-no-content.zip";s:11:"new_bundled";s:53:"https://wordpress.org/wordpress-3.8.1-new-bundled.zip";s:7:"partial";s:51:"https://wordpress.org/wordpress-3.8.1-partial-0.zip";s:8:"rollback";b:0;}s:7:"current";s:5:"3.8.1";s:7:"version";s:5:"3.8.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"3.8";s:15:"partial_version";s:3:"3.8";}i:1;O:8:"stdClass":10:{s:8:"response";s:10:"autoupdate";s:8:"download";s:41:"https://wordpress.org/wordpress-3.8.1.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:41:"https://wordpress.org/wordpress-3.8.1.zip";s:10:"no_content";s:52:"https://wordpress.org/wordpress-3.8.1-no-content.zip";s:11:"new_bundled";s:53:"https://wordpress.org/wordpress-3.8.1-new-bundled.zip";s:7:"partial";s:51:"https://wordpress.org/wordpress-3.8.1-partial-0.zip";s:8:"rollback";s:52:"https://wordpress.org/wordpress-3.8.1-rollback-0.zip";}s:7:"current";s:5:"3.8.1";s:7:"version";s:5:"3.8.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"3.8";s:15:"partial_version";s:3:"3.8";}}s:12:"last_checked";i:1393263969;s:15:"version_checked";s:3:"3.8";s:12:"translations";a:0:{}}', 'yes'),
 (102, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1393264526;s:7:"checked";a:10:{s:30:"advanced-custom-fields/acf.php";s:5:"4.3.4";s:19:"akismet/akismet.php";s:5:"2.5.9";s:39:"column-shortcodes/column-shortcodes.php";s:5:"0.6.4";s:45:"enable-media-replace/enable-media-replace.php";s:5:"2.9.4";s:59:"intuitive-custom-post-order/intuitive-custom-post-order.php";s:5:"2.0.6";s:39:"mavis-job-manager/mavis-job-manager.php";s:3:"1.0";s:29:"mavis-people/mavis-people.php";s:3:"1.0";s:41:"mavis-testimonials/mavis-testimonials.php";s:3:"1.0";s:27:"wp-clean-up/wp-clean-up.php";s:5:"1.2.1";s:33:"wp-job-manager/wp-job-manager.php";s:5:"1.6.0";}s:8:"response";a:1:{s:33:"wp-job-manager/wp-job-manager.php";O:8:"stdClass":5:{s:2:"id";s:5:"41501";s:4:"slug";s:14:"wp-job-manager";s:11:"new_version";s:5:"1.7.3";s:3:"url";s:45:"https://wordpress.org/plugins/wp-job-manager/";s:7:"package";s:63:"https://downloads.wordpress.org/plugin/wp-job-manager.1.7.3.zip";}}s:12:"translations";a:0:{}}', 'yes'),
 (105, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1393263972;s:7:"checked";a:2:{s:5:"mavis";s:5:"1.0.0";s:5:"roots";s:5:"6.5.1";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes'),
@@ -282,7 +282,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1588 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1652 ;
 
 --
 -- Dumping data for table `wp_postmeta`
@@ -306,7 +306,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (32, 4, '_edit_last', '1'),
 (33, 4, '_wp_page_template', 'default'),
 (34, 16, '_edit_last', '1'),
-(35, 16, '_edit_lock', '1389805908:1'),
+(35, 16, '_edit_lock', '1393265878:1'),
 (36, 16, '_wp_page_template', 'default'),
 (37, 19, '_menu_item_type', 'post_type'),
 (38, 19, '_menu_item_menu_item_parent', '0'),
@@ -407,9 +407,9 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (335, 59, '_job_salary', '£25,000 - £32,000'),
 (336, 59, '_job_day_rate', ''),
 (337, 118, '_edit_last', '1'),
-(338, 118, '_edit_lock', '1392993898:1'),
+(338, 118, '_edit_lock', '1393266058:1'),
 (339, 118, '_wp_page_template', 'default'),
-(340, 120, '_edit_lock', '1392993836:1'),
+(340, 120, '_edit_lock', '1393265356:1'),
 (341, 120, '_edit_last', '1'),
 (342, 120, 'field_52c974ad2ede4', 'a:12:{s:3:"key";s:19:"field_52c974ad2ede4";s:5:"label";s:7:"Address";s:4:"name";s:7:"address";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:10:"formatting";s:2:"br";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}'),
 (345, 120, 'position', 'normal'),
@@ -444,14 +444,14 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (390, 118, '_telephone_numbers', 'field_52c97624cedca'),
 (391, 118, 'skype_name', 'helen_hellomavis\r\nmelissa_hellomavis'),
 (392, 118, '_skype_name', 'field_52c9763dcedcb'),
-(393, 126, '_edit_lock', '1389002685:1'),
+(393, 126, '_edit_lock', '1393265436:1'),
 (394, 126, '_edit_last', '1'),
 (395, 126, 'field_52c976c6e7cda', 'a:14:{s:3:"key";s:19:"field_52c976c6e7cda";s:5:"label";s:8:"Facebook";s:4:"name";s:8:"facebook";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}'),
 (396, 126, 'field_52c976eee7cdb', 'a:14:{s:3:"key";s:19:"field_52c976eee7cdb";s:5:"label";s:7:"Twitter";s:4:"name";s:7:"twitter";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}'),
 (397, 126, 'field_52c976f8e7cdc', 'a:14:{s:3:"key";s:19:"field_52c976f8e7cdc";s:5:"label";s:8:"LinkedIn";s:4:"name";s:8:"linkedin";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}'),
 (398, 126, 'field_52c97700e7cdd', 'a:14:{s:3:"key";s:19:"field_52c97700e7cdd";s:5:"label";s:9:"Pinterest";s:4:"name";s:9:"pinterest";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}'),
 (399, 126, 'field_52c97713e7cde', 'a:14:{s:3:"key";s:19:"field_52c97713e7cde";s:5:"label";s:6:"Flickr";s:4:"name";s:6:"flickr";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:9;}'),
-(400, 126, 'field_52c9771ae7cdf', 'a:14:{s:3:"key";s:19:"field_52c9771ae7cdf";s:5:"label";s:9:"Instagram";s:4:"name";s:9:"instagram";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:11;}'),
+(400, 126, 'field_52c9771ae7cdf', 'a:14:{s:3:"key";s:19:"field_52c9771ae7cdf";s:5:"label";s:9:"Instagram";s:4:"name";s:9:"instagram";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:11;}'),
 (402, 126, 'position', 'side'),
 (403, 126, 'layout', 'default'),
 (404, 126, 'hide_on_screen', ''),
@@ -509,7 +509,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (507, 126, 'field_52c97e50ef24b', 'a:11:{s:3:"key";s:19:"field_52c97e50ef24b";s:5:"label";s:13:"LinkedIn Icon";s:4:"name";s:13:"linkedin_icon";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:4:"full";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}'),
 (508, 126, 'field_52c97e61ef24c', 'a:11:{s:3:"key";s:19:"field_52c97e61ef24c";s:5:"label";s:14:"Pinterest Icon";s:4:"name";s:14:"pinterest_icon";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:4:"full";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}'),
 (509, 126, 'field_52c97e6fef24d', 'a:11:{s:3:"key";s:19:"field_52c97e6fef24d";s:5:"label";s:11:"Flickr Icon";s:4:"name";s:11:"flickr_icon";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:4:"full";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:10;}'),
-(510, 126, 'field_52c97e83ef24f', 'a:11:{s:3:"key";s:19:"field_52c97e83ef24f";s:5:"label";s:14:"Instagram Icon";s:4:"name";s:14:"instagram_icon";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:4:"full";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:12;}'),
+(510, 126, 'field_52c97e83ef24f', 'a:11:{s:3:"key";s:19:"field_52c97e83ef24f";s:5:"label";s:14:"Instagram Icon";s:4:"name";s:14:"instagram_icon";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:4:"full";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:12;}'),
 (512, 133, '_wp_attachment_image_alt', 'Facebook Icon'),
 (513, 138, '_wp_attachment_image_alt', 'Twitter Icon'),
 (514, 136, '_wp_attachment_image_alt', 'LinkedIn Icon'),
@@ -555,7 +555,6 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (708, 118, '_header_copy', 'field_52ca7970b673b'),
 (878, 118, 'instagram_icon', '135'),
 (879, 118, '_instagram_icon', 'field_52c97e83ef24f'),
-(880, 126, 'rule', 'a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"==";s:5:"value";s:3:"118";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
 (913, 156, '_menu_item_type', 'post_type'),
 (914, 156, '_menu_item_menu_item_parent', '0'),
 (915, 156, '_menu_item_object_id', '91'),
@@ -686,7 +685,25 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1584, 213, '_wp_attached_file', '2013/12/helen-fleming-portrait.jpg'),
 (1585, 213, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:480;s:6:"height";i:720;s:4:"file";s:34:"2013/12/helen-fleming-portrait.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:34:"helen-fleming-portrait-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:34:"helen-fleming-portrait-200x300.jpg";s:5:"width";i:200;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:10:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";}}'),
 (1586, 9, '_thumbnail_id', '213'),
-(1587, 213, '_wp_attachment_image_alt', 'Helen Fleming');
+(1587, 213, '_wp_attachment_image_alt', 'Helen Fleming'),
+(1588, 126, 'field_530b8ad65b2be', 'a:14:{s:3:"key";s:19:"field_530b8ad65b2be";s:5:"label";s:7:"Google+";s:4:"name";s:6:"google";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:13;}'),
+(1589, 126, 'field_530b8aef5b2bf', 'a:11:{s:3:"key";s:19:"field_530b8aef5b2bf";s:5:"label";s:12:"Google+ Icon";s:4:"name";s:11:"google_icon";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:4:"full";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:14;}'),
+(1590, 126, 'rule', 'a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"==";s:5:"value";s:3:"118";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
+(1591, 215, '_edit_lock', '1393265652:1'),
+(1592, 215, '_edit_last', '1'),
+(1593, 216, '_edit_lock', '1393265601:1'),
+(1594, 216, '_edit_last', '1'),
+(1595, 217, '_edit_last', '1'),
+(1596, 217, '_edit_lock', '1393265593:1'),
+(1597, 218, '_edit_lock', '1393265719:1'),
+(1598, 218, '_edit_last', '1'),
+(1599, 222, '_wp_attached_file', '2014/01/google-icon.png'),
+(1600, 222, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:64;s:6:"height";i:64;s:4:"file";s:23:"2014/01/google-icon.png";s:5:"sizes";a:0:{}s:10:"image_meta";a:10:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";}}'),
+(1601, 222, '_wp_attachment_image_alt', 'Google Icon'),
+(1648, 118, 'google', 'https://plus.google.com/'),
+(1649, 118, '_google', 'field_530b8ad65b2be'),
+(1650, 118, 'google_icon', '222'),
+(1651, 118, '_google_icon', 'field_530b8aef5b2bf');
 
 -- --------------------------------------------------------
 
@@ -723,7 +740,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=214 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=224 ;
 
 --
 -- Dumping data for table `wp_posts`
@@ -734,7 +751,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (4, 1, '2013-12-30 09:31:00', '2013-12-30 09:31:00', '<h1>Mavis looks after talented people in the digital creative industry, finding them great roles in good-to-work-for agencies</h1>', 'Introduction', '', 'publish', 'closed', 'closed', '', 'introduction', '', '', '2014-02-21 10:43:45', '2014-02-21 10:43:45', '', 91, 'http://hellomavis.local/?page_id=4', 2, 'page', '', 0),
 (7, 1, '2013-12-30 09:31:00', '2013-12-30 09:31:00', ' ', '', 'About', 'publish', 'open', 'closed', '', '7', '', '', '2014-01-11 12:16:28', '2014-01-11 12:16:28', '', 0, 'http://hellomavis.local/7/', 4, 'nav_menu_item', '', 0),
 (9, 1, '2013-12-30 11:08:47', '2013-12-30 11:08:47', 'I began my career as a designer and gained valuable experience in a number of London-based design agencies before spending several years at leading creative recruitment consultancies, where I specialised in the digital sector. The combination of direct industry and recruitment experience gave me the confidence and know-how to create Mavis.\r\n\r\nHere I can concentrate on what I do best: looking after digital talent and finding the right candidate for the right role.<!--more-->I enjoy working with clever creative thinkers and designers at all levels. I have previously advised young talent at advertising and design universities, and led many graduate portfolio days with key industry figures.\r\n\r\nMy design background gives me an instinctive understanding of candidates, and the ability to evaluate portfolios and give career advice, building long-lasting relationships along the way. My inability to turn down an invite ensures that I regularly attend industry events, talks and award ceremonies.\r\n\r\nYou can see my full <a title="Helen Fleming on LinkedIn" href="http://uk.linkedin.com/in/helenlfleming" target="_blank">CV</a> on <a title="Helen Fleming on LinkedIn" href="http://uk.linkedin.com/in/helenlfleming" target="_blank">Linkedin</a>.\r\n\r\nI still love making, drawing and photographing, and you can see what I’ve been doing on <a title="Helen Fleming on Instagram" href="http://instagram.com" target="_blank">Instagram</a> and what I love on <a title="Helen Fleming on Flickr" href="http://flickr.com" target="_blank">Flickr</a>.', 'Helen Fleming', '', 'publish', 'closed', 'closed', '', 'helen-fleming', '', '', '2014-02-24 18:01:24', '2014-02-24 18:01:24', '', 0, 'http://hellomavis.local/?post_type=people&#038;p=9', 1, 'people', '', 0),
-(16, 1, '2013-12-30 11:28:10', '2013-12-30 11:28:10', '[one_half]\r\n\r\n<p>We are an independent digital recruitment agency that loves to find the best talent for clients and the right opportunities for candidates.</p>\r\n\r\n<p>With a large talent network and a lot of industry know-how, we respond to client briefs and candidate requirements intelligently, creatively, efficiently and without fuss.</p>\r\n\r\n<p>Mavis works with the best digital design, advertising and interaction agencies in the UK and Europe.</p>\r\n\r\n[/one_half]\r\n\r\n[one_half_last]\r\n\r\nWe find great roles for freelance and full time:\r\n<ul>\r\n	<li>Art directors</li>\r\n	<li>Creative directors</li>\r\n	<li>Creative teams</li>\r\n	<li>Designers</li>\r\n	<li>UX &amp; UI designers</li>\r\n	<li>Copywriters</li>\r\n	<li>Producers</li>\r\n</ul>\r\n&nbsp;\r\n\r\n[/one_half_last]', 'Working together', '', 'publish', 'closed', 'open', '', 'working-together', '', '', '2014-01-04 16:10:58', '2014-01-04 16:10:58', '', 0, 'http://hellomavis.local/?page_id=16', 5, 'page', '', 0),
+(16, 1, '2013-12-30 11:28:10', '2013-12-30 11:28:10', '[one_half]\r\n\r\n<p>We are an independent digital recruitment agency that loves to find the best talent for clients and the right opportunities for candidates.</p>\r\n\r\n<p>With a large talent network and a lot of industry know-how, we respond to client briefs and candidate requirements intelligently, creatively, efficiently and without fuss.</p>\r\n\r\n<p>Mavis works with the best digital design, advertising and interaction agencies in the UK and Europe.</p>\r\n\r\n[/one_half]\r\n\r\n[one_half_last]\r\n\r\nWe find great roles for freelance and full time:\r\n<ul>\r\n	<li>Art directors</li>\r\n	<li>Creative Directors</li>\r\n	<li>Creative Teams</li>\r\n	<li>Design Directors</li>\r\n	<li>Designers</li>\r\n	<li>UX &amp; UI Designers</li>\r\n	<li>Copywriters</li>\r\n	<li>Strategists</li>\r\n</ul>\r\n&nbsp;\r\n\r\n[/one_half_last]', 'Working together', '', 'publish', 'closed', 'open', '', 'working-together', '', '', '2014-02-24 18:19:40', '2014-02-24 18:19:40', '', 0, 'http://hellomavis.local/?page_id=16', 5, 'page', '', 0),
 (19, 1, '2013-12-30 11:28:35', '2013-12-30 11:28:35', ' ', '', 'Working together', 'publish', 'open', 'closed', '', '19', '', '', '2014-01-11 12:16:28', '2014-01-11 12:16:28', '', 0, 'http://hellomavis.local/?p=19', 2, 'nav_menu_item', '', 0),
 (33, 1, '2013-12-30 12:23:50', '2013-12-30 12:23:50', 'Extremely creative studio based in central London seek part time Studio Manager for a 3 day a week contract.\r\n\r\nThis much lauded business publishes 2 award winning fashion magazines bi-annually and is known for its'' writing voice and use of photography.\r\n\r\nThe office manager will organise and supervise all the daily administrative activities that facilitate the smooth running of the office.\r\n\r\nThis will involve organising the daily activities of the office including;\r\n<ul>\r\n	<li>Management of office IT.</li>\r\n	<li>Managing filing systems.</li>\r\n	<li>Recording office expenditure.</li>\r\n	<li>Managing accounts and budgets</li>\r\n	<li>Providing support to and liaising with the accountants.</li>\r\n	<li>Maintaining the office, ordering office supplies, maintaing the condition of the office and arranging for necessary repairs;</li>\r\n	<li>Overseeing the induction of new staff members.</li>\r\n	<li>Responding to general queries to the office.</li>\r\n	<li>Logistics management.</li>\r\n</ul>\r\nWe are looking for someone with strong MAC I.T. skills, some bookkeeping experience, good fashion knowledge and some previous office management experience.', 'Digital Marketing Assistant', '', 'trash', 'closed', 'closed', '', 'digital-marketing-assistant', '', '', '2013-12-30 16:56:49', '2013-12-30 16:56:49', '', 0, 'http://hellomavis.local/?post_type=jobs&#038;p=33', 0, 'jobs', '', 0),
 (44, 1, '2013-12-30 17:17:01', '2013-12-30 17:17:01', '[jobs]', 'Jobs', '', 'publish', 'closed', 'open', '', 'jobs', '', '', '2014-01-03 14:38:36', '2014-01-03 14:38:36', '', 0, 'http://hellomavis.local/?page_id=44', 6, 'page', '', 0),
@@ -749,11 +766,11 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (85, 1, '2014-01-03 12:18:08', '2014-01-03 12:18:08', '', 'Latest Job Background', '', 'inherit', 'open', 'open', '', 'latest-job-background', '', '', '2014-01-03 12:18:08', '2014-01-03 12:18:08', '', 84, 'http://hellomavis.local//media//2014/01/latest-job-background.png', 0, 'attachment', 'image/png', 0),
 (91, 1, '2014-01-03 14:37:23', '2014-01-03 14:37:23', '', 'Overview', '', 'publish', 'closed', 'open', '', 'overview', '', '', '2014-01-03 14:38:36', '2014-01-03 14:38:36', '', 0, 'http://hellomavis.local/?page_id=91', 1, 'page', '', 0),
 (97, 1, '2014-01-03 15:14:06', '2014-01-03 15:14:06', '', 'Page Links', '', 'publish', 'closed', 'closed', '', 'acf_page-links', '', '', '2014-01-03 15:17:33', '2014-01-03 15:17:33', '', 0, 'http://hellomavis.local/?post_type=acf&#038;p=97', 0, 'acf', '', 0),
-(118, 1, '2014-01-05 14:18:17', '2014-01-05 14:18:17', 'We like to build long-lasting relationships with talented, creative people. Please get in touch and say hello, we''d love to hear from you.', 'Contact', '', 'publish', 'closed', 'closed', '', 'contact', '', '', '2014-02-21 14:45:06', '2014-02-21 14:45:06', '', 0, 'http://hellomavis.local/?page_id=118', 9, 'page', '', 0),
+(118, 1, '2014-01-05 14:18:17', '2014-01-05 14:18:17', 'We like to build long-lasting relationships with talented, creative people. Please get in touch and say hello, we''d love to hear from you.', 'Contact', '', 'publish', 'closed', 'closed', '', 'contact', '', '', '2014-02-24 18:21:43', '2014-02-24 18:21:43', '', 0, 'http://hellomavis.local/?page_id=118', 9, 'page', '', 0),
 (120, 1, '2014-01-05 15:06:20', '2014-01-05 15:06:20', '', 'Contact Details', '', 'publish', 'closed', 'closed', '', 'acf_contact-details', '', '', '2014-02-21 14:43:56', '2014-02-21 14:43:56', '', 0, 'http://hellomavis.local/?post_type=acf&#038;p=120', 0, 'acf', '', 0),
 (121, 1, '2014-01-05 15:07:47', '2014-01-05 15:07:47', '', 'Email Address', '', 'trash', 'closed', 'closed', '', 'acf_email-address', '', '', '2014-01-05 15:09:12', '2014-01-05 15:09:12', '', 0, 'http://hellomavis.local/?post_type=acf&#038;p=121', 0, 'acf', '', 0),
 (123, 1, '2014-01-05 15:08:46', '2014-01-05 15:08:46', '', 'Telephone Numbers', '', 'trash', 'closed', 'closed', '', 'acf_telephone-numbers', '', '', '2014-01-05 15:09:10', '2014-01-05 15:09:10', '', 0, 'http://hellomavis.local/?post_type=acf&#038;p=123', 0, 'acf', '', 0),
-(126, 1, '2014-01-05 15:16:07', '2014-01-05 15:16:07', '', 'Social Links', '', 'publish', 'closed', 'closed', '', 'acf_social-links', '', '', '2014-01-06 10:03:35', '2014-01-06 10:03:35', '', 0, 'http://hellomavis.local/?post_type=acf&#038;p=126', 0, 'acf', '', 0),
+(126, 1, '2014-01-05 15:16:07', '2014-01-05 15:16:07', '', 'Social Links', '', 'publish', 'closed', 'closed', '', 'acf_social-links', '', '', '2014-02-24 18:10:35', '2014-02-24 18:10:35', '', 0, 'http://hellomavis.local/?post_type=acf&#038;p=126', 0, 'acf', '', 0),
 (128, 1, '2014-01-05 15:39:01', '2014-01-05 15:39:01', '', 'Address Icon', '', 'inherit', 'closed', 'closed', '', 'address-icon', '', '', '2014-01-05 15:39:01', '2014-01-05 15:39:01', '', 118, 'http://hellomavis.local//media//2014/01/address-icon.png', 0, 'attachment', 'image/png', 0),
 (129, 1, '2014-01-05 15:39:40', '2014-01-05 15:39:40', '', 'Email Address Icon', '', 'inherit', 'closed', 'closed', '', 'email-icon', '', '', '2014-01-05 15:39:40', '2014-01-05 15:39:40', '', 118, 'http://hellomavis.local//media//2014/01/email-icon.png', 0, 'attachment', 'image/png', 0),
 (130, 1, '2014-01-05 15:39:54', '2014-01-05 15:39:54', '', 'Skype Icon', '', 'inherit', 'closed', 'closed', '', 'skype-icon', '', '', '2014-01-05 15:39:54', '2014-01-05 15:39:54', '', 118, 'http://hellomavis.local//media//2014/01/skype-icon.png', 0, 'attachment', 'image/png', 0),
@@ -782,7 +799,12 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (181, 1, '2014-02-21 10:18:44', '2014-02-21 10:18:44', '', 'Melissa Phillips', '', 'inherit', 'closed', 'closed', '', 'melissa-phillips-portrait', '', '', '2014-02-21 10:18:44', '2014-02-21 10:18:44', '', 63, 'http://hellomavis.local//media//2013/12/melissa-phillips-portrait.jpg', 0, 'attachment', 'image/jpeg', 0),
 (186, 1, '2014-02-21 10:42:16', '2014-02-21 10:42:16', '', 'Overview Background', '', 'inherit', 'closed', 'closed', '', 'overview-background', '', '', '2014-02-21 10:42:16', '2014-02-21 10:42:16', '', 0, 'http://hellomavis.local//media//2014/02/overview-background.jpg', 0, 'attachment', 'image/jpeg', 0),
 (205, 1, '2014-02-22 18:08:08', '2014-02-22 18:08:08', 'Recruitment is a people business. Many agents appear to have forgotten this. Not so Hello Mavis – Helen digs deep into your business needs and then into the candidates'' psyches as much as their portfolios. I have only ever seen quality CVs from Hello Mavis and that keeps me coming back.', 'Adam Powers (Head of User Experience, BBH & BBH Labs Partner)', '', 'publish', 'closed', 'closed', '', 'adam-powers', '', '', '2014-02-22 19:13:33', '2014-02-22 19:13:33', '', 0, 'http://hellomavis.local/?post_type=testimonials&#038;p=205', 1, 'testimonials', '', 0),
-(213, 1, '2014-02-24 18:01:13', '2014-02-24 18:01:13', '', 'Helen Fleming', '', 'inherit', 'closed', 'closed', '', 'helen-fleming-portrait', '', '', '2014-02-24 18:01:13', '2014-02-24 18:01:13', '', 9, 'http://hellomavis.local//media//2013/12/helen-fleming-portrait.jpg', 0, 'attachment', 'image/jpeg', 0);
+(213, 1, '2014-02-24 18:01:13', '2014-02-24 18:01:13', '', 'Helen Fleming', '', 'inherit', 'closed', 'closed', '', 'helen-fleming-portrait', '', '', '2014-02-24 18:01:13', '2014-02-24 18:01:13', '', 9, 'http://hellomavis.local//media//2013/12/helen-fleming-portrait.jpg', 0, 'attachment', 'image/jpeg', 0),
+(215, 1, '2014-02-24 18:13:24', '2014-02-24 18:13:24', 'It''s been a pleasure to work with a recruitment business that not only understands our ''requirement'' but understands us as people too, as well as the personality of our brand before introducing us to exceptional talent when the time is right.', 'Guy Jenkins (Product & Service Director, Great Fridays)', '', 'publish', 'closed', 'closed', '', 'guy-jenkins-product-service-director-great-fridays', '', '', '2014-02-24 18:15:23', '2014-02-24 18:15:23', '', 0, 'http://hellomavis.local/?post_type=testimonials&#038;p=215', 0, 'testimonials', '', 0),
+(216, 1, '2014-02-24 18:14:04', '2014-02-24 18:14:04', 'Hello Mavis are thoughtful, considered and responsive. They listen carefully to the brief and field high quality, relevant candidates. A joy to work with.', 'Kate Roskill (Independents United)', '', 'publish', 'closed', 'closed', '', 'kate-roskill-independents-united', '', '', '2014-02-24 18:14:04', '2014-02-24 18:14:04', '', 0, 'http://hellomavis.local/?post_type=testimonials&#038;p=216', 0, 'testimonials', '', 0),
+(217, 1, '2014-02-24 18:14:26', '2014-02-24 18:14:26', 'I''ve worked with Helen for many years now and she''s always great to work with. She''s always happy to help, quick to respond and has good contacts in the industry across Europe.', 'Martin Buckwell (Creative Director)', '', 'publish', 'closed', 'closed', '', 'martin-buckwell-creative-director', '', '', '2014-02-24 18:15:06', '2014-02-24 18:15:06', '', 0, 'http://hellomavis.local/?post_type=testimonials&#038;p=217', 0, 'testimonials', '', 0),
+(218, 1, '2014-02-24 18:17:05', '2014-02-24 18:17:05', 'Helen and her team at Hello Mavis are unique. They spend time really getting to know us as an agency, our culture, working practices and needs, and only present candidates that they believe truly fit the bill. Always happy to help, even at the 11th hour, they''re a pleasure to work with and we would happily recommend them to other agencies and candidates alike.', 'Annabelle Dewing (Business & Marketing Director at ODD)', '', 'publish', 'closed', 'closed', '', 'annabelle-dewing-business-marketing-director-at-odd', '', '', '2014-02-24 18:17:05', '2014-02-24 18:17:05', '', 0, 'http://hellomavis.local/?post_type=testimonials&#038;p=218', 0, 'testimonials', '', 0),
+(222, 1, '2014-02-24 18:21:23', '2014-02-24 18:21:23', '', 'Google Icon', '', 'inherit', 'closed', 'closed', '', 'google-icon', '', '', '2014-02-24 18:21:23', '2014-02-24 18:21:23', '', 118, 'http://hellomavis.local//media//2014/01/google-icon.png', 0, 'attachment', 'image/png', 0);
 
 -- --------------------------------------------------------
 
@@ -962,9 +984,9 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (11, 1, 'wp_user_level', '10'),
 (12, 1, 'dismissed_wp_pointers', 'wp330_toolbar,wp330_saving_widgets,wp340_choose_image_from_library,wp340_customize_current_theme_link,wp350_media,wp360_revisions,wp360_locks'),
 (13, 1, 'show_welcome_panel', '0'),
-(14, 1, 'wp_dashboard_quick_press_last_post_id', '212'),
-(15, 1, 'wp_user-settings', 'mfold=o&libraryContent=browse&editor=tinymce&hidetb=0&ed_size=454'),
-(16, 1, 'wp_user-settings-time', '1392978065'),
+(14, 1, 'wp_dashboard_quick_press_last_post_id', '214'),
+(15, 1, 'wp_user-settings', 'mfold=o&libraryContent=browse&editor=tinymce&hidetb=1&ed_size=454'),
+(16, 1, 'wp_user-settings-time', '1393265988'),
 (17, 1, 'nav_menu_recently_edited', '2'),
 (18, 1, 'managenav-menuscolumnshidden', 'a:4:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";}'),
 (19, 1, 'metaboxhidden_nav-menus', 'a:7:{i:0;s:8:"add-post";i:1;s:10:"add-people";i:2;s:16:"add-custom-links";i:3;s:12:"add-category";i:4;s:12:"add-post_tag";i:5;s:24:"add-job_listing_category";i:6;s:20:"add-job_listing_type";}'),
