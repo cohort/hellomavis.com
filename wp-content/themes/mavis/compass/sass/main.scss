@@ -706,29 +706,34 @@ section.contact {
 		.details {
 			margin-top: 60px;
 
-			.detail {
-				height: 250px;
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				text-align: center;
 
-				> div {
-					margin: 0 auto;
-				}
+				li {
+					display: inline-block;
+					height: 250px;
+					vertical-align: top;
+					width: 24%;
 
-				.icon {
-					width: 64px;
-
-					img {
-						width: inherit;
+					> div {
+						margin: 0 auto;
 					}
-				}
 
-				.copy {
-					margin-top: 25px;
-					text-align: center;
-				}
-			}
+					.icon {
+						width: 64px;
 
-			.address {
-				.copy {
+						img {
+							width: inherit;
+						}
+					}
+
+					.copy {
+						margin-top: 25px;
+						text-align: center;
+					}
 				}
 			}
 		}
@@ -906,6 +911,19 @@ footer {
 		}
 	}
 
+	section.contact {
+		background-color: $color-cream;
+
+		.inner {
+			.details {
+				ul {
+					li {
+						width: 48%;
+					}
+				}
+			}
+		}
+	}
 }
 
 /* Tablet (Portrait) */
@@ -1195,9 +1213,14 @@ footer {
 	section.contact {
 		.inner {
 			.details {
-				.detail {
-					height: auto;
-					margin-bottom: 30px;
+				ul {
+					margin-bottom: 50px;
+					
+					li {
+						height: auto;
+						margin-bottom: 50px;
+						width: 100%;
+					}
 				}
 			}
 

@@ -22,36 +22,46 @@
 		</div>
 		<div class="content"><?php echo do_shortcode( $post->post_content ) ; ?></div>
 		<div class="details row">
-			<div class="detail address col-md-3 col-sm-6">
-				<div class="icon">
-					<?php $icon = get_field( 'address_icon' ) ; ?>
-					<img src="<?php echo $icon[ 'url' ] ; ?>" alt="<?php echo $icon[ 'alt' ] ; ?>" />
-				</div>
-				<div class="copy"><?php echo the_field( 'address' , $post->ID ) ; ?></div>
-			</div>
-			<div class="detail email-address col-md-3 col-sm-6">
-				<div class="icon">
-					<?php $icon = get_field( 'email_address_icon' ) ; ?>
-					<img src="<?php echo $icon[ 'url' ] ; ?>" alt="<?php echo $icon[ 'alt' ] ; ?>" />
-				</div>
-				<div class="copy">
-					<?php echo the_field( 'email_address' , $post->ID ) ; ?>
-				</div>
-			</div>
-			<div class="detail telephone-numbers col-md-3 col-sm-6">
-				<div class="icon">
-					<?php $icon = get_field( 'telephone_numbers_icon' ) ; ?>
-					<img src="<?php echo $icon[ 'url' ] ; ?>" alt="<?php echo $icon[ 'alt' ] ; ?>" />
-				</div>
-				<div class="copy"><?php echo the_field( 'telephone_numbers' , $post->ID ) ; ?></div>
-			</div>
-			<div class="detail skype-name col-md-3 col-sm-6">
-				<div class="icon">
-					<?php $icon = get_field( 'skype_name_icon' ) ; ?>
-					<img src="<?php echo $icon[ 'url' ] ; ?>" alt="<?php echo $icon[ 'alt' ] ; ?>" />
-				</div>
-				<div class="copy"><?php echo the_field( 'skype_name' , $post->ID ) ; ?></div>
-			</div>
+			<ul>
+				<?php if ( get_field( 'address' , $post->ID ) && get_field( 'address_icon' , $post->ID ) ) : ?>
+				<li class="detail address">
+					<div class="icon">
+						<?php $icon = get_field( 'address_icon' ) ; ?>
+						<img src="<?php echo $icon[ 'url' ] ; ?>" alt="<?php echo $icon[ 'alt' ] ; ?>" />
+					</div>
+					<div class="copy"><?php echo the_field( 'address' , $post->ID ) ; ?></div>					
+				</li>
+				<?php endif ; ?>
+				<?php if ( get_field( 'email_address' , $post->ID ) && get_field( 'email_address_icon' , $post->ID ) ) : ?>
+				<li class="detail email-address">
+					<div class="icon">
+						<?php $icon = get_field( 'email_address_icon' ) ; ?>
+						<img src="<?php echo $icon[ 'url' ] ; ?>" alt="<?php echo $icon[ 'alt' ] ; ?>" />
+					</div>
+					<div class="copy">
+						<?php echo the_field( 'email_address' , $post->ID ) ; ?>
+					</div>			
+				</li>
+				<?php endif ; ?>
+				<?php if ( get_field( 'telephone_numbers' , $post->ID ) && get_field( 'telephone_numbers_icon' , $post->ID ) ) : ?>
+				<li class="detail telephone-numbers">
+					<div class="icon">
+						<?php $icon = get_field( 'telephone_numbers_icon' ) ; ?>
+						<img src="<?php echo $icon[ 'url' ] ; ?>" alt="<?php echo $icon[ 'alt' ] ; ?>" />
+					</div>
+					<div class="copy"><?php echo the_field( 'telephone_numbers' , $post->ID ) ; ?></div>
+				</li>
+				<?php endif ; ?>
+				<?php if ( get_field( 'skype_name' , $post->ID ) && get_field( 'skype_name_icon' , $post->ID ) ) : ?>
+				<li class="detail skype-name">
+					<div class="icon">
+						<?php $icon = get_field( 'skype_name_icon' ) ; ?>
+						<img src="<?php echo $icon[ 'url' ] ; ?>" alt="<?php echo $icon[ 'alt' ] ; ?>" />
+					</div>
+					<div class="copy"><?php echo the_field( 'skype_name' , $post->ID ) ; ?></div>
+				</li>
+				<?php endif ; ?>
+			</ul>
 		</div>
 		<div class="social row">
 			<div class="header-copy"><?php echo the_field( 'header_copy' , $post->ID ) ; ?></div>
