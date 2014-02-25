@@ -129,6 +129,12 @@
 			float: right;
 			vertical-align: middle;
 		}
+		.wp-editor-container {
+			border: 1px solid #ccc;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+		}
 		.account-sign-in {
 			.button {
 				margin-right: .5em;
@@ -158,7 +164,7 @@
 			display: block;
 			line-height: 1.2em;
 		}
-		.job-manager-uploaded-image {
+		.job-manager-uploaded-file {
 			line-height: 64px;
 			font-style: italic;
 			margin: 0 0 1em 0;
@@ -216,7 +222,7 @@ ul.job_listings {
 			&:hover, &:focus {
 				background-color: #fcfcfc;
 			}
-			img {
+			img.company_logo {
 				width: 42px;
 				height: 42px;
 				position: absolute;
@@ -426,7 +432,7 @@ ul.job_listings {
 		}
 		.location:before {
 			.display-icon;
-			content: '\e80d';
+			content: '\e81d';
 		}
 		.date-posted:before {
 			.display-icon;

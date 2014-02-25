@@ -56,12 +56,16 @@ function get_job_listings( $args = array() ) {
 			'compare' => '!='
 		);
 
-	if ( $args['search_location'] )
-		$query_args['meta_query'][] = array(
-			'key'     => '_job_location',
-			'value'   => $args['search_location'],
-			'compare' => 'LIKE'
-		);
+	// Location search - search geolocation data and location meta
+	if ( $args['search_location'] ) {
+		$post_ids = $wpdb->get_col( $wpdb->prepare( "
+		    SELECT DISTINCT post_id FROM {$wpdb->postmeta}
+		    WHERE meta_key IN ( 'geolocation_city', 'geolocation_country_long', 'geolocation_country_short', 'geolocation_formatted_address', 'geolocation_state_long', 'geolocation_state_short', 'geolocation_street', 'geolocation_zipcode', '_job_location' ) 
+		    AND meta_value LIKE '%%%s%%'
+		", $args['search_location'] ) );
+
+		$query_args['post__in'] = $post_ids + array( 0 );
+	}
 
 	// Keyword search - search meta as well as post content
 	if ( $args['search_keywords'] ) {
@@ -189,13 +193,13 @@ function job_manager_get_filtered_links( $args = array() ) {
 
 	$links = apply_filters( 'job_manager_job_filters_showing_jobs_links', array(
 		'reset' => array(
-			'name' => __( 'Reset', 'job_manager' ),
+			'name' => __( 'Reset', 'wp-job-manager' ),
 			'url'  => '#'
 		),
 		'rss_link' => array(
-			'name' => __( 'RSS', 'job_manager' ),
+			'name' => __( 'RSS', 'wp-job-manager' ),
 			'url'  => get_job_listing_rss_link( apply_filters( 'job_manager_get_listings_custom_filter_rss_args', array(
-				'type'           => implode( ',', $args['filter_job_types'] ),
+				'type'           => isset( $args['filter_job_types'] ) ? implode( ',', $args['filter_job_types'] ) : '',
 				'location'       => $args['search_location'],
 				'job_categories' => implode( ',', $args['search_categories'] ),
 				's'              => $args['search_keywords'],
@@ -243,10 +247,10 @@ function wp_job_manager_create_account( $account_email, $role = '' ) {
 		return false;
 
 	if ( ! is_email( $user_email ) )
-		return new WP_Error( 'validation-error', __( 'Your email address isn&#8217;t correct.', 'job_manager' ) );
+		return new WP_Error( 'validation-error', __( 'Your email address isn&#8217;t correct.', 'wp-job-manager' ) );
 
 	if ( email_exists( $user_email ) )
-		return new WP_Error( 'validation-error', __( 'This email is already registered, please choose another one.', 'job_manager' ) );
+		return new WP_Error( 'validation-error', __( 'This email is already registered, please choose another one.', 'wp-job-manager' ) );
 
 	// Email is good to go - use it to create a user name
 	$username = sanitize_user( current( explode( '@', $user_email ) ) );
@@ -274,7 +278,7 @@ function wp_job_manager_create_account( $account_email, $role = '' ) {
 		'user_login' => $username,
 		'user_pass'  => $password,
 		'user_email' => $user_email,
-		'role'       => $role
+		'role'       => $role ? $role : get_option( 'default_role' )
     );
 
     $user_id = wp_insert_user( apply_filters( 'job_manager_create_account_data', $new_user ) );
