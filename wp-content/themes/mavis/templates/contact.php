@@ -116,7 +116,7 @@
 				<?php endif ; ?>
 				<?php if ( get_field( 'google' , $post->ID ) && get_field( 'google_icon' , $post->ID ) ) : ?>
 				<li>
-					<a href="<?php echo the_field( 'google' , $post->ID ) ; ?>" title="Google">
+					<a href="<?php echo the_field( 'google' , $post->ID ) ; ?>" title="Google+" rel="publisher">
 						<?php $icon = get_field( 'google_icon' ) ; ?>
 						<img src="<?php echo $icon[ 'url' ] ; ?>" alt="<?php echo $icon[ 'alt' ] ; ?>" />
 					</a>

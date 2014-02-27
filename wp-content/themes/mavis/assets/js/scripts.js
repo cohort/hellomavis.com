@@ -43,7 +43,7 @@ $( document ).ready(
 			function ( e )
 			{
 				var href = $( this ).attr( 'href' ) ,
-					http = new RegExp( 'http://' ).test( href ) ,
+					http = new RegExp( 'http://|https://' ).test( href ) ,
 					local = new RegExp( location.host ).test( href ) ,
 					email = new RegExp( 'mailto:' ).test( href ) ,
 					sub = window.location.pathname.match( /\//g ).length > 2 ;
