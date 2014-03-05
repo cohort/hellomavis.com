@@ -20,7 +20,7 @@
 		<div class="title">
 			<h1><?php the_title( ) ; ?></h1>
 		</div>
-		<div class="content"><?php echo do_shortcode( $post->post_content ) ; ?></div>
+		<div class="content"><?php echo do_shortcode( wpautop( $post->post_content , TRUE ) ) ; ?></div>
 	</div>
 	<div class="people container">
 	<?php
